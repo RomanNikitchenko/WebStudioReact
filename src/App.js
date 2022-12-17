@@ -1,7 +1,7 @@
 import React from 'react';
 import { Suspense, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import AppBar from 'components/AppBar';
+import { AppBar } from 'components/AppBar';
 import PublicRoute from './components/PublicRoure';
 
 const HomeViev = lazy(() => import('views/HomeView'));

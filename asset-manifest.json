@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/web-studio-react/static/css/main.419c3c10.css",
-    "main.js": "/web-studio-react/static/js/main.3c7ecb31.js",
+    "main.css": "/web-studio-react/static/css/main.b6f6d4c3.css",
+    "main.js": "/web-studio-react/static/js/main.c7f06752.js",
     "static/js/561.c2e1de3a.chunk.js": "/web-studio-react/static/js/561.c2e1de3a.chunk.js",
-    "static/js/951.862696d0.chunk.js": "/web-studio-react/static/js/951.862696d0.chunk.js",
+    "static/js/951.07f7d636.chunk.js": "/web-studio-react/static/js/951.07f7d636.chunk.js",
     "index.html": "/web-studio-react/index.html",
-    "main.419c3c10.css.map": "/web-studio-react/static/css/main.419c3c10.css.map",
-    "main.3c7ecb31.js.map": "/web-studio-react/static/js/main.3c7ecb31.js.map",
+    "main.b6f6d4c3.css.map": "/web-studio-react/static/css/main.b6f6d4c3.css.map",
+    "main.c7f06752.js.map": "/web-studio-react/static/js/main.c7f06752.js.map",
     "561.c2e1de3a.chunk.js.map": "/web-studio-react/static/js/561.c2e1de3a.chunk.js.map",
-    "951.862696d0.chunk.js.map": "/web-studio-react/static/js/951.862696d0.chunk.js.map"
+    "951.07f7d636.chunk.js.map": "/web-studio-react/static/js/951.07f7d636.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.419c3c10.css",
-    "static/js/main.3c7ecb31.js"
+    "static/css/main.b6f6d4c3.css",
+    "static/js/main.c7f06752.js"
   ]
 }

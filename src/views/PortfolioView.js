@@ -1,9 +1,15 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from 'react-router-dom';
 import { getProducts } from "../fakeAPI";
 
 export const PortfolioView = () => {
-  const products = getProducts();
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    getProducts().then(setProducts);
+  }, [setProducts])
+
   return (
     <main>
       <div>

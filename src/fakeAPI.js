@@ -127,7 +127,7 @@ const products = [
 ];
 
 export const getProducts = () => {
-  return filter;
+  return Promise.resolve(filter);
 };
 
 export const getProductById = (productId) => {

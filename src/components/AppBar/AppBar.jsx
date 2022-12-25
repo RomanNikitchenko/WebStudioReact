@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Outlet } from 'react-router-dom';
 import { Container } from 'components/Container';
 import { Navigation } from 'components/Navigation';
 import { ContactsNavList } from 'components/ContactsNavList';
@@ -14,13 +15,16 @@ const ContainerNav = styled.div`
 
 export const AppBar = () => {
   return (
-    <Header>
-      <Container>
-        <ContainerNav>
-          <Navigation />
-          <ContactsNavList />
-        </ContainerNav>
-      </Container>
-    </Header>
+    <>
+      <Header>
+        <Container>
+          <ContainerNav>
+            <Navigation />
+            <ContactsNavList />
+          </ContainerNav>
+        </Container>
+      </Header>
+      <Outlet />
+    </>
   );
 };

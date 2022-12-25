@@ -40,7 +40,7 @@ export const ContactsNavList = () => {
   return (
     <List>
       <Item>
-        <StyledLink to="mailto:info@devstudio.com" exact>
+        <StyledLink to="/mailto:info@devstudio.com">
           {/* <svg class="contact-nav__icon" width="14" height="10">
             <use href="./images/icons.svg#envelope2"></use>
           </svg>
@@ -52,7 +52,7 @@ export const ContactsNavList = () => {
       </Item>
 
       <Item>
-        <StyledLink to="tel:+380961111111" exact>
+        <StyledLink to="/tel:+380961111111">
           {/* <svg class="contact-nav__icon" width="10" height="14">
             <use href="./images/icons.svg#smartphone"></use>
           </svg>

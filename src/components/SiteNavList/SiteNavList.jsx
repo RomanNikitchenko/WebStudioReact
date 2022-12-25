@@ -49,7 +49,8 @@ const StyledLink = styled(NavLink)`
     }
   }
 
-  &:hover {
+  :hover:not(.active),
+  :focus-visible:not(.active) {
     color: var(--accent-color);
   }
 `;
@@ -58,19 +59,13 @@ export const SiteNavList = () => {
   return (
     <List>
       <Item>
-        <StyledLink exact to="/">
-          Студия
-        </StyledLink>
+        <StyledLink to="/">Студия</StyledLink>
       </Item>
       <Item>
-        <StyledLink exact to="/portfolio">
-          Портфолио
-        </StyledLink>
+        <StyledLink to="/portfolio">Портфолио</StyledLink>
       </Item>
       <Item>
-        <StyledLink exact to="/contacts">
-          Контакты
-        </StyledLink>
+        <StyledLink to="/contacts">Контакты</StyledLink>
       </Item>
     </List>
   );

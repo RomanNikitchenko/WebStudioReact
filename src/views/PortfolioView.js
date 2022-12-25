@@ -1,28 +1,23 @@
-import React from 'react';
+import { Link } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import { getProducts } from "../fakeAPI";
 
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
+export const PortfolioView = () => {
+  const products = getProducts();
+  return (
+    <main>
+      <div>
+        {products.map(({id, name}) => (
+          <div key={id}>
+            <Link to={`${id}`}>
+              <h3>{name}</h3>
+            </Link>
+          </div>
+        ))}
+        </div>
+        <Outlet />
+    </main>
+  );
 };
 
-const Phonebook = () => (
-  <div style={styles.container}>
-    <h1 style={styles.title}>
-      Phonebook{' '}
-      <span role="img" aria-label="Иконка приветствия">
-        💁‍♀️
-      </span>
-    </h1>
-  </div>
-);
-
-export default Phonebook;
+export default PortfolioView;

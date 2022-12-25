@@ -20,7 +20,7 @@ const Span = styled.span`
 
 export const Logo = () => {
   return (
-    <StyledLink to={'/logo'}>
+    <StyledLink to="/">
       <Span>Web</Span>Studio
     </StyledLink>
   );

@@ -1,31 +1,25 @@
 import React from 'react';
-import { Suspense, lazy } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import { AppBar } from 'components/AppBar';
-import PublicRoute from './components/PublicRoure';
+import { ProductDetails } from "./views/ProductDetails";
 
-const HomeViev = lazy(() => import('views/HomeView'));
-const PortfolioView = lazy(() => import('views/PortfolioView'));
+import HomeViev from './views/HomeView';
+import PortfolioView from './views/PortfolioView';
 
 const App = () => {
   return (
     <div>
-      <AppBar />
-      <Suspense fallback={<p>Загружаем...</p>}>
-        <Switch>
-          <PublicRoute exact path="/">
-            <HomeViev />
-          </PublicRoute>
-
-          <PublicRoute exact path="/portfolio">
-            <PortfolioView />
-          </PublicRoute>
-
-          <Route path="*">
-            <Redirect to="/" />
+      <Routes>
+        <Route path="/" element={<AppBar />}>
+          <Route index element={<HomeViev />} />
+          <Route path="portfolio" element={<PortfolioView />}>
+            <Route index element={<ProductDetails />} />
+            <Route path=":id" element={<ProductDetails />} />
           </Route>
-        </Switch>
-      </Suspense>
+          <Route path="contacts" element={<div>contacts</div>} />
+          <Route path="*" element={<div>*</div>}/>
+        </Route>
+      </Routes>
     </div>
   );
 };

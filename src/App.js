@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppBar } from 'components/AppBar';
 import { ProductDetails } from './views/ProductDetails';
-
 import HomeViev from './views/HomeView';
 import PortfolioView from './views/PortfolioView';
 import Allprodusts from './views/AllProducts';

@@ -60,24 +60,8 @@ p {
   margin: 0;
 }
 
-@media screen and (max-width: 1199px) {
-  .feature-section,
-  .team-section,
-  .clients-section,
-  .skills-section,
-  .portfolio-section{
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .feature-section,
-  .team-section,
-  .clients-section,
-  .skills-section,
-  .portfolio-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

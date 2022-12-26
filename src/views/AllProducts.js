@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getProductById } from '../fakeAPI';
+import { getProducts } from '../fakeAPI';
 
-export const ProductDetails = () => {
-  const { id } = useParams();
-  const [product, setProducts] = useState([]);
+const Allprodusts = () => {
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProductById(id).then(setProducts);
-  }, [setProducts, id]);
+    getProducts().then(setProducts);
+  }, [setProducts]);
 
   return (
     <ul>
-      {product &&
-        product.map(({ id, img, description, title, text }) => {
+      {products &&
+        products.map(({ id, img, description, title, text }) => {
           // const { srcset, sizes, src, alt } = img;
           return (
             <li key={id}>
@@ -31,3 +29,5 @@ export const ProductDetails = () => {
     </ul>
   );
 };
+
+export default Allprodusts;

@@ -64,7 +64,7 @@ const PortfolioView = () => {
           <FilterList>
             {products.map(({ id, name }) => (
               <FilterItems key={id}>
-                <FilterLink to={`${id}`}>{name}</FilterLink>
+                <FilterLink to={`${id}`} state={{from: id}}>{name}</FilterLink>
               </FilterItems>
             ))}
           </FilterList>

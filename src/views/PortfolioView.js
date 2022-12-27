@@ -64,7 +64,7 @@ const PortfolioView = () => {
           <FilterList>
             {products.map(({ id, name }) => (
               <FilterItems key={id}>
-                <FilterLink to={`${id}`} state={{from: id}}>{name}</FilterLink>
+                <FilterLink to={`${id}`}>{name}</FilterLink>
               </FilterItems>
             ))}
           </FilterList>
@@ -74,33 +74,5 @@ const PortfolioView = () => {
     </main>
   );
 };
-
-//  <ul class="filter filter--end list">
-//    <li class="filter__items">
-//      <button class="button filter__button" type="button">
-//        Все
-//      </button>
-//    </li>
-//    <li class="filter__items">
-//      <button class="button filter__button" type="button">
-//        Веб-сайты
-//      </button>
-//    </li>
-//    <li class="filter__items">
-//      <button class="button filter__button" type="button">
-//        Приложения
-//      </button>
-//    </li>
-//    <li class="filter__items">
-//      <button class="button filter__button" type="button">
-//        Дизайн
-//      </button>
-//    </li>
-//    <li class="filter__items">
-//      <button class="button filter__button" type="button">
-//        Маркетинг
-//      </button>
-//    </li>
-//  </ul>;
 
 export default PortfolioView;

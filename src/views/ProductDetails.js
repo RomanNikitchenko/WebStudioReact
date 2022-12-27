@@ -11,7 +11,7 @@ export const ProductDetails = () => {
     getProductById(id).then(setProducts);
   }, [setProducts, id]);
 
-  console.log(location.state ?? "All");
+  console.log(location.pathname);
 
   return (
     <ul>

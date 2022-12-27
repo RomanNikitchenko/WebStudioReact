@@ -6,6 +6,7 @@ import HomeViev from './views/HomeView';
 import PortfolioView from './views/PortfolioView';
 
 const App = () => {
+
   return (
     <div>
       <Routes>
@@ -13,7 +14,7 @@ const App = () => {
           <Route index element={<HomeViev />} />
           <Route path="portfolio" element={<PortfolioView />}>
             <Route index element={<Navigate to="All" />} />
-            <Route path=":id" element={<ProductDetails />} />
+            <Route path=":id" element={<ProductDetails/>} />
           </Route>
           <Route path="contacts" element={<div>contacts</div>} />
           <Route path="*" element={<div>*</div>} />

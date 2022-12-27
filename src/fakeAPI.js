@@ -149,11 +149,6 @@ export const getfilter = async () => {
   return response;
 };
 
-export const getProducts = async () => {
-  const response = await products;
-  return response;
-};
-
 export const getProductById = async productId => {
   const response = await products;
   return response.filter(({ name }) => name.includes(productId));

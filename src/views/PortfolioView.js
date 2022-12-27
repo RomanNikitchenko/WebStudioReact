@@ -40,13 +40,24 @@ const FilterLink = styled(NavLink)`
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
-  background: #f5f4fa;
+  color: var(--title-text-color);
+  background: var(--bg-color-light);
   border-radius: 4px;
   padding: 6px 22px;
 
   &.active {
-    color: var(--accent-color);
+    color: var(--text-color-white);
+    background: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  :hover:not(.active),
+  :focus-visible:not(.active) {
+    color: var(--text-color-white);
+    background: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 `;
 

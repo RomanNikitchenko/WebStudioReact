@@ -1,17 +1,14 @@
 import { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getProductById } from '../fakeAPI';
 
 export const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProducts] = useState([]);
-  const location = useLocation();
 
   useEffect(() => {
     getProductById(id).then(setProducts);
   }, [setProducts, id]);
-
-  console.log(location.pathname);
 
   return (
     <ul>

@@ -4,6 +4,8 @@ import { Outlet } from 'react-router-dom';
 import { getfilter } from '../fakeAPI';
 import { Section } from 'components/Section';
 import { Container } from 'components/Container';
+import { useDispatch } from 'react-redux';
+import { addCurrentType } from 'redux/extraInfo/extraInfo-slice';
 import styled from 'styled-components';
 
 const SectionPortfolio = styled(Section)`
@@ -23,6 +25,7 @@ const SectionPortfolio = styled(Section)`
 const FilterList = styled.ul`
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 `;
 
 const FilterItems = styled.li`
@@ -32,6 +35,7 @@ const FilterItems = styled.li`
 `;
 
 const FilterLink = styled(NavLink)`
+  display: inline-block;
   text-decoration: none;
   font-family: 'Roboto';
   font-style: normal;
@@ -66,10 +70,25 @@ const FilterLink = styled(NavLink)`
 
 const PortfolioView = () => {
   const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getfilter().then(setProducts);
   }, [setProducts]);
+
+  const handleBtnClick = evt => {
+    dispatch(addCurrentType(evt.target.name));
+    // if (evt.target.name === 'expense') {
+    //   dispatch(addCurrentType('expense'));
+    // }
+
+    // if (evt.target.name === 'income') {
+    //   dispatch(addCurrentType('income'));
+    // }
+
+    // dispatch(addCurrentCategory('Категорія'));
+    // visible();
+  };
 
   return (
     <main>
@@ -78,7 +97,13 @@ const PortfolioView = () => {
           <FilterList>
             {products.map(({ id, name }) => (
               <FilterItems key={id}>
-                <FilterLink to={`${id}`}>{name}</FilterLink>
+                <FilterLink
+                  name={`${id}`}
+                  to={`${id}`}
+                  onClick={handleBtnClick}
+                >
+                  {name}
+                </FilterLink>
               </FilterItems>
             ))}
           </FilterList>

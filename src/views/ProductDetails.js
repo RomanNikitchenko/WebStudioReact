@@ -11,7 +11,7 @@ const PortfolioList = styled.ul`
   margin-top: -30px;
 `;
 
-const PortfolioProduct = styled.li`
+const PortfolItem = styled.li`
   @media screen and (min-width: 480px) {
     flex-basis: calc(100% / 1 - 30px);
   }
@@ -36,6 +36,30 @@ const PortfolioLink = styled(NavLink)`
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+
+  &:hover p {
+    transform: translateY(0);
+  }
+`;
+
+const PortfolioDescription = styled.div`
+  position: relative;
+  overflow: hidden;
+`;
+
+const PortfolioText = styled.p`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--text-color-white);
+  font-size: 18px;
+  line-height: 1.55;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 export const ProductDetails = () => {
@@ -52,18 +76,18 @@ export const ProductDetails = () => {
         product.map(({ id, img, description, title, text }) => {
           // const { srcset, sizes, src, alt } = img;
           return (
-            <PortfolioProduct key={id}>
+            <PortfolItem key={id}>
               <PortfolioLink>
-                <div>
+                <PortfolioDescription>
                   {/* <img srcset={srcset} sizes={sizes} src={src} alt={alt} /> */}
-                  <p>{description}</p>
-                </div>
+                  <PortfolioText>{description}</PortfolioText>
+                </PortfolioDescription>
                 <div>
                   <h2>{title}</h2>
                   <p>{text}</p>
                 </div>
               </PortfolioLink>
-            </PortfolioProduct>
+            </PortfolItem>
           );
         })}
     </PortfolioList>

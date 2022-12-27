@@ -78,16 +78,6 @@ const PortfolioView = () => {
 
   const handleBtnClick = evt => {
     dispatch(addCurrentType(evt.target.name));
-    // if (evt.target.name === 'expense') {
-    //   dispatch(addCurrentType('expense'));
-    // }
-
-    // if (evt.target.name === 'income') {
-    //   dispatch(addCurrentType('income'));
-    // }
-
-    // dispatch(addCurrentCategory('Категорія'));
-    // visible();
   };
 
   return (

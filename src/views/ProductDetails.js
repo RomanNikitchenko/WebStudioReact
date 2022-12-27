@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { getProductById } from '../fakeAPI';
 import styled from 'styled-components';
 
-const WorksList = styled.ul`
+const PortfolioList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
@@ -25,6 +26,18 @@ const PortfolioProduct = styled.li`
   margin-top: 30px;
 `;
 
+const PortfolioLink = styled(NavLink)`
+  display: block;
+  text-decoration: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+`;
+
 export const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProducts] = useState([]);
@@ -34,23 +47,25 @@ export const ProductDetails = () => {
   }, [setProducts, id]);
 
   return (
-    <WorksList>
+    <PortfolioList>
       {product &&
         product.map(({ id, img, description, title, text }) => {
           // const { srcset, sizes, src, alt } = img;
           return (
             <PortfolioProduct key={id}>
-              <div>
-                {/* <img srcset={srcset} sizes={sizes} src={src} alt={alt} /> */}
-                <p>{description}</p>
-              </div>
-              <div>
-                <h2>{title}</h2>
-                <p>{text}</p>
-              </div>
+              <PortfolioLink>
+                <div>
+                  {/* <img srcset={srcset} sizes={sizes} src={src} alt={alt} /> */}
+                  <p>{description}</p>
+                </div>
+                <div>
+                  <h2>{title}</h2>
+                  <p>{text}</p>
+                </div>
+              </PortfolioLink>
             </PortfolioProduct>
           );
         })}
-    </WorksList>
+    </PortfolioList>
   );
 };

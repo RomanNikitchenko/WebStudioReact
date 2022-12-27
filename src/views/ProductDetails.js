@@ -47,6 +47,11 @@ const PortfolioDescription = styled.div`
   overflow: hidden;
 `;
 
+const PortfolioImg = styled.img`
+  width: 370px;
+  height: 294px;
+`;
+
 const PortfolioText = styled.p`
   position: absolute;
   width: 100%;
@@ -73,13 +78,13 @@ export const ProductDetails = () => {
   return (
     <PortfolioList>
       {product &&
-        product.map(({ id, img, description, title, text }) => {
+        product.map(({ id, description, title, text }) => {
           // const { srcset, sizes, src, alt } = img;
           return (
             <PortfolItem key={id}>
               <PortfolioLink>
                 <PortfolioDescription>
-                  {/* <img srcset={srcset} sizes={sizes} src={src} alt={alt} /> */}
+                  <PortfolioImg />
                   <PortfolioText>{description}</PortfolioText>
                 </PortfolioDescription>
                 <div>

@@ -1,0 +1,1 @@
+export { PortfolioProduct } from './PortfolioProduct';

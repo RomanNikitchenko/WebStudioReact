@@ -44,6 +44,9 @@ const FilterLink = styled(NavLink)`
   background: var(--bg-color-light);
   border-radius: 4px;
   padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.active {
     color: var(--text-color-white);

@@ -76,7 +76,7 @@ const PortfolioView = () => {
     getfilter().then(setProducts);
   }, [setProducts]);
 
-  const handleBtnClick = evt => {
+  const handleClick = evt => {
     dispatch(addCurrentType(evt.target.name));
   };
 
@@ -87,11 +87,7 @@ const PortfolioView = () => {
           <FilterList>
             {products.map(({ id, name }) => (
               <FilterItems key={id}>
-                <FilterLink
-                  name={`${id}`}
-                  to={`${id}`}
-                  onClick={handleBtnClick}
-                >
+                <FilterLink name={`${id}`} to={`${id}`} onClick={handleClick}>
                   {name}
                 </FilterLink>
               </FilterItems>

@@ -8,18 +8,18 @@ import { getCurrentType } from 'redux/extraInfo/extraInfo-selectors';
 import { useSelector } from 'react-redux';
 
 const App = () => {
-  const transactionOptions = useSelector(getCurrentType);
+  const options = useSelector(getCurrentType);
   return (
     <div>
       <Routes>
         <Route path="/" element={<AppBar />}>
           <Route index element={<HomeViev />} />
           <Route path="portfolio" element={<PortfolioView />}>
-            <Route index element={<Navigate to={`${transactionOptions}`} />} />
+            <Route index element={<Navigate to={`${options}`} />} />
             <Route path=":id" element={<ProductDetails />} />
           </Route>
           <Route path="contacts" element={<div>contacts</div>} />
-          <Route path="*" element={<div>*</div>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </div>

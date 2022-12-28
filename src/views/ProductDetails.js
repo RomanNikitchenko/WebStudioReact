@@ -22,10 +22,11 @@ export const ProductDetails = () => {
   return (
     <PortfolioList>
       {product &&
-        product.map(({ id, description, title, text }) => {
+        product.map(({ id, img, description, title, text }) => {
           return (
             <PortfolioProduct
               key={id}
+              img={img}
               description={description}
               title={title}
               text={text}

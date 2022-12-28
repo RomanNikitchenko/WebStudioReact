@@ -33,16 +33,6 @@
             1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolioLink:hover .portfolioText,
-.portfolioLink:focus .portfolioText{
-    transform: translateY(0);
-}
-
-.portfolioLink:hover .thumbTitleAccent {
-    transform: translateX(-100%);
-}
-
-
 .portfolioDescription {
     position: relative;
     overflow: hidden;
@@ -51,6 +41,7 @@
 .portfolioImg {
     width: 370px;
     height: 294px;
+    background-color: var(--card-border-color);
 }
 
 .portfolioText {
@@ -68,20 +59,22 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolioLink:hover .portfolioText,
+.portfolioLink:focus .portfolioText {
+    transform: translateY(0);
+}
+
 .thumb {
+    position: relative;
     border: solid 1px var(--card-border-color);
     border-top: 0;
     padding: 20px 24px;
 }
 
-.thumbAccent {
-    height: 111px;
-    position: relative;
-    overflow: hidden;
-}
-
 .thumbTitle {
-    font-weight: bold;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -89,10 +82,23 @@
     margin: 0 0 4px;
 }
 
-.thumbTitleAccent {
+.thumbTitleOpacity {
     position: absolute;
-    color: var(--accent-color);
-    transform: translateX(0);
+    opacity: 1;
+}
+
+.portfolioLink:hover .thumbTitleOpacity, 
+.portfolioLink:focus .thumbTitleOpacity {
+    opacity: 0;
+}
+
+.thumbTitleAccentOpacity{
+    opacity: 0;
+}
+
+.portfolioLink:hover .thumbTitleAccentOpacity,
+.portfolioLink:focus .thumbTitleAccentOpacity {
+    opacity: 1;
 }
 
 .thumbText {

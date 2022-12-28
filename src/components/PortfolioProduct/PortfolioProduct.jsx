@@ -28,7 +28,8 @@ const PortfolioLink = styled(NavLink)`
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-  &:hover p {
+  :hover p,
+  :focus p {
     transform: translateY(0);
   }
 `;
@@ -58,7 +59,36 @@ const PortfolioText = styled.p`
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
+const Thumb = styled.div`
+  border: solid 1px var(--card-border-color);
+  border-top: 0;
+  padding: 20px 24px;
+`;
+
+const ThumbTitle = styled.h2`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+  margin: 0 0 4px;
+`;
+
+const ThumbText = styled.h2`
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-text-color);
+`;
+
 export const PortfolioProduct = ({ description, title, text }) => {
+  const trimmedString = title => {
+    if (title.length > 15) {
+      return `${title.slice(0, 25).trim()}${'...'}`;
+    }
+
+    return title.trim();
+  };
+
   return (
     <PortfolioItem>
       <PortfolioLink>
@@ -66,10 +96,10 @@ export const PortfolioProduct = ({ description, title, text }) => {
           <PortfolioImg />
           <PortfolioText>{description}</PortfolioText>
         </PortfolioDescription>
-        <div>
-          <h2>{title}</h2>
-          <p>{text}</p>
-        </div>
+        <Thumb>
+          <ThumbTitle>{trimmedString(title)}</ThumbTitle>
+          <ThumbText>{text}</ThumbText>
+        </Thumb>
       </PortfolioLink>
     </PortfolioItem>
   );

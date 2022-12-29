@@ -1,0 +1,38 @@
+
+.link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .list {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .list {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+    .item:not(:last-child) {
+        margin-right: 30px;
+    }
+    .link {
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+

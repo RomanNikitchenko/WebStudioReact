@@ -1,0 +1,39 @@
+@media screen and (min-width: 768px) {
+    .link {
+        text-decoration: none;
+        font-family: 'Roboto';
+        color: var(--title-text-color);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        position: relative;
+    }
+
+    .link::after {
+        content: ' ';
+        position: absolute;
+        left: 50%;
+        bottom: -31px;
+        width: 0px;
+        min-height: 4px;
+        border-radius: 4px;
+        background-color: var(--accent-color);
+        transform: translate(-50%, -0%);
+        transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .link.active {
+        color: var(--accent-color);
+    }
+
+    .link.active::after {
+        width: 100%;
+    }
+
+    .link:hover:not(.active), 
+    .link:focus-visible:not(.active) {
+        color: var(--accent-color);
+    }
+}

@@ -1,43 +1,51 @@
 import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import s from './ContactsNavList.module.css';
 import { useMediaQuery } from '@react-hook/media-query';
-import icon from 'assets/symbol-icons.svg';
+import icon from 'assets/symbol-defs.svg';
 
 export const ContactsNavList = () => {
-  // const isMobile = useMediaQuery('only screen and (min-width: 767px)');
+  const [widthMailto, setWidthMailto] = useState('14');
+  const [heightMailto, setHeightMailto] = useState('10');
+  const [widthTel, setWidthTel] = useState('10');
+  const [heightTel, setHeightTel] = useState('14');
+
   const isTablet = useMediaQuery('only screen and (max-width: 1199px)');
   const isdesktop = useMediaQuery('only screen and (min-width: 1200px)');
+
+  useEffect(() => {
+    if (isTablet) {
+      setWidthMailto('14');
+      setHeightMailto('10');
+      setWidthTel('10');
+      setHeightTel('14');
+      return;
+    }
+    if (isdesktop) {
+      setWidthMailto('16');
+      setHeightMailto('12');
+      setWidthTel('10');
+      setHeightTel('16');
+      return;
+    }
+  }, [isTablet, isdesktop]);
 
   return (
     <ul className={s.list}>
       <li className={s.item}>
         <NavLink className={s.link} to="/mailto:info@devstudio.com">
-          {isTablet && (
-            <svg className={s.icon} width="14" height="10">
-              <use href={`${icon}#icon-arrowToBackReportSection`}></use>
-            </svg>
-          )}
-          {isdesktop && (
-            <svg className={s.icon} width="16" height="12">
-              <use href={`${icon}#icon-arrowToBackReportSection`}></use>
-            </svg>
-          )}
+          <svg className={s.icon} width={widthMailto} height={heightMailto}>
+            <use href={`${icon}#mailto`}></use>
+          </svg>
           info@devstudio.com
         </NavLink>
       </li>
 
       <li className={s.item}>
         <NavLink className={s.link} to="/tel:+380961111111">
-          {isTablet && (
-            <svg className={s.icon} width="10" height="14">
-              <use href={`${icon}#icon-arrowToBackReportSection`}></use>
-            </svg>
-          )}
-          {isdesktop && (
-            <svg className={s.icon} width="10" height="16">
-              <use href={`${icon}#icon-arrowToBackReportSection`}></use>
-            </svg>
-          )}
+          <svg className={s.icon} width={widthTel} height={heightTel}>
+            <use href={`${icon}#smartphone`}></use>
+          </svg>
           +38 096 111 11 11
         </NavLink>
       </li>

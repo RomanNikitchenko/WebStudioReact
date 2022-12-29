@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
 import { Container } from 'components/Container';
 import { Navigation } from 'components/Navigation';
-import { ContactsNavList } from 'components/ContactsNavList';
+// import { ContactsNavList } from 'components/ContactsNavList';
 
 const Header = styled.header`
   background-color: var(--text-color-white);
@@ -20,7 +20,7 @@ export const AppBar = () => {
         <Container>
           <ContainerNav>
             <Navigation />
-            <ContactsNavList />
+            {/* <ContactsNavList /> */}
           </ContainerNav>
         </Container>
       </Header>

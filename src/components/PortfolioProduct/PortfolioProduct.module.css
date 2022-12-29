@@ -65,7 +65,6 @@
 }
 
 .thumb {
-    position: relative;
     border: solid 1px var(--card-border-color);
     border-top: 0;
     padding: 20px 24px;
@@ -80,25 +79,6 @@
     letter-spacing: 0.06em;
     color: var(--title-text-color);
     margin: 0 0 4px;
-}
-
-.thumbTitleOpacity {
-    position: absolute;
-    opacity: 1;
-}
-
-.portfolioLink:hover .thumbTitleOpacity, 
-.portfolioLink:focus .thumbTitleOpacity {
-    opacity: 0;
-}
-
-.thumbTitleAccentOpacity{
-    opacity: 0;
-}
-
-.portfolioLink:hover .thumbTitleAccentOpacity,
-.portfolioLink:focus .thumbTitleAccentOpacity {
-    opacity: 1;
 }
 
 .thumbText {

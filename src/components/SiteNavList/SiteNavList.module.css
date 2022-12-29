@@ -1,4 +1,17 @@
 @media screen and (min-width: 768px) {
+    .list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .item:not(:last-child) {
+        margin-right: 50px;
+    }
+
     .link {
         text-decoration: none;
         font-family: 'Roboto';
@@ -15,7 +28,7 @@
         content: ' ';
         position: absolute;
         left: 50%;
-        bottom: -31px;
+        bottom: -32px;
         width: 0px;
         min-height: 4px;
         border-radius: 4px;
@@ -35,5 +48,11 @@
     .link:hover:not(.active), 
     .link:focus-visible:not(.active) {
         color: var(--accent-color);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .link::after {
+        bottom: -31px;
     }
 }

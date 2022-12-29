@@ -1,26 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
 import s from './SiteNavList.module.css';
-
-const List = styled.ul`
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-`;
-
-const Item = styled.li`
-  &:not(:last-child) {
-    margin-right: 50px;
-  }
-`;
 
 export const SiteNavList = () => {
   return (
-    <List>
-      <Item>
+    <ul className={s.list}>
+      <li className={s.item}>
         <NavLink
           to="/"
           className={isActive => {
@@ -29,8 +13,8 @@ export const SiteNavList = () => {
         >
           Студия
         </NavLink>
-      </Item>
-      <Item>
+      </li>
+      <li className={s.item}>
         <NavLink
           to="/portfolio"
           className={isActive => {
@@ -39,8 +23,8 @@ export const SiteNavList = () => {
         >
           Портфолио
         </NavLink>
-      </Item>
-      <Item>
+      </li>
+      <li className={s.item}>
         <NavLink
           to="/contacts"
           className={isActive => {
@@ -49,7 +33,7 @@ export const SiteNavList = () => {
         >
           Контакты
         </NavLink>
-      </Item>
-    </List>
+      </li>
+    </ul>
   );
 };

@@ -1,7 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import s from './ContactsNavList.module.css';
+import { useMediaQuery } from '@react-hook/media-query';
 
 export const ContactsNavList = () => {
+  // const isMobile = useMediaQuery('only screen and (min-width: 767px)');
+  // const isTablet = useMediaQuery('only screen and (min-width: 768px)');
+  // const isdesktop = useMediaQuery('only screen and (min-width: 1200px)');
+
   return (
     <ul className={s.list}>
       <li className={s.item}>

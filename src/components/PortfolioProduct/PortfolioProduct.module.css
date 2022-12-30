@@ -51,7 +51,8 @@
 }
 
 .thumb {
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
     border: solid 1px var(--card-border-color);
     border-top: 0;
     padding: 20px 24px;

@@ -1,6 +1,5 @@
 .list {
     display: flex;
-    border: 1px solid red;
     flex-wrap: wrap;
     margin-bottom: 25px;
 }
@@ -50,8 +49,6 @@
 
 @media screen and (min-width: 768px) {
     .list {
-        display: flex;
-        border: 1px solid red;
         flex-wrap: nowrap;
         justify-content: center;
         margin-bottom: 30px;
@@ -63,10 +60,6 @@
 
 @media screen and (min-width: 1200px) {
     .list {
-        display: flex;
-        border: 1px solid red;
-        flex-wrap: nowrap;
-        justify-content: center;
         margin-bottom: 50px;
     }
 }

@@ -57,6 +57,10 @@
     padding: 20px 24px;
 }
 
+.thumbItem {
+    height: 147px;
+}
+
 .thumbTitle {
     font-family: 'Roboto';
     font-style: normal;

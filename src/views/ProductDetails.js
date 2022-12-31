@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { getProductById } from '../fakeAPI';
 import styled from 'styled-components';
 import { PortfolioProduct } from 'components/PortfolioProduct';
+import { getCurrentIndex } from 'redux/extraInfo/extraInfo-selectors';
+import { useSelector } from 'react-redux';
 
 const PortfolioList = styled.ul`
   display: flex;
@@ -14,6 +16,7 @@ const PortfolioList = styled.ul`
 export const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProducts] = useState([]);
+  const options = useSelector(getCurrentIndex);
 
   useEffect(() => {
     getProductById(id).then(setProducts);
@@ -22,14 +25,16 @@ export const ProductDetails = () => {
   return (
     <PortfolioList>
       {product &&
-        product.map(({ id, img, description, title, text }) => {
+        product.map(({ id, img, description, title, text }, index) => {
           return (
             <PortfolioProduct
               key={id}
+              index={index}
               img={img}
               description={description}
               title={title}
               text={text}
+              productIndex={options}
             />
           );
         })}

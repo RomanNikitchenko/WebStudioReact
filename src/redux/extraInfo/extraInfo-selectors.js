@@ -1,7 +1,7 @@
 const getCurrentType = state => state.extraInfo.currentType;
-// const getCurrentCategory = (state) => state.extraInfo.currentCategory;
+const getCurrentIndex = (state) => state.extraInfo.currentIndex;
 
 export {
   getCurrentType,
-  // getCurrentCategory,
+  getCurrentIndex,
 };

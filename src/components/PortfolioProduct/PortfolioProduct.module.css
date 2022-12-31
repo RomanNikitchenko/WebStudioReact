@@ -58,7 +58,7 @@
 }
 
 .thumbItem {
-    height: 147px;
+    min-height: 147px;
 }
 
 .thumbTitle {

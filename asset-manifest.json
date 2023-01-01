@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/web-studio-react/static/css/main.ae3a49d9.css",
-    "main.js": "/web-studio-react/static/js/main.0518ce06.js",
-    "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.102ed46a4671b8637a5a2f968c297d97.svg",
+    "main.css": "/web-studio-react/static/css/main.c7a1f589.css",
+    "main.js": "/web-studio-react/static/js/main.b1322b3d.js",
+    "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.7d0c54eec825811278b45fd3db539c60.svg",
     "index.html": "/web-studio-react/index.html",
-    "main.ae3a49d9.css.map": "/web-studio-react/static/css/main.ae3a49d9.css.map",
-    "main.0518ce06.js.map": "/web-studio-react/static/js/main.0518ce06.js.map"
+    "main.c7a1f589.css.map": "/web-studio-react/static/css/main.c7a1f589.css.map",
+    "main.b1322b3d.js.map": "/web-studio-react/static/js/main.b1322b3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae3a49d9.css",
-    "static/js/main.0518ce06.js"
+    "static/css/main.c7a1f589.css",
+    "static/js/main.b1322b3d.js"
   ]
 }

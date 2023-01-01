@@ -65,3 +65,7 @@ ul {
   margin: 0;
   list-style: none;
 }
+
+body.modal-open {
+  overflow: hidden;
+}

@@ -1,12 +1,19 @@
-import { useState } from 'react';
 import icon from 'assets/symbol-defs.svg';
 import s from './BtnMenu.module.css';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { changeCurrentBtnMenu } from 'redux/extraInfo/extraInfo-slice';
+import { getCurrentBtnMenu } from 'redux/extraInfo/extraInfo-selectors';
+
 export const BtnMenu = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+  const dispatch = useDispatch();
+  const openMenu = useSelector(getCurrentBtnMenu);
 
   const handleBtnClick = () => {
-    !openMenu ? setOpenMenu(true) : setOpenMenu(false);
+    !openMenu
+      ? dispatch(changeCurrentBtnMenu(true))
+      : dispatch(changeCurrentBtnMenu(false));
+    // document.body.classList.toggle('modal-open');
   };
 
   return (

@@ -3,10 +3,14 @@ import { Container } from 'components/Container';
 import { Navigation } from 'components/Navigation';
 import { ContactsNavList } from 'components/ContactsNavList';
 import { BtnMenu } from 'components/BtnMenu';
+import { Modal } from 'components/Modal';
+import { useSelector } from 'react-redux';
+import { getCurrentBtnMenu } from 'redux/extraInfo/extraInfo-selectors';
 import { useMediaQuery } from '@react-hook/media-query';
 import s from './AppBar.module.css';
 
 export const AppBar = () => {
+  const openMenu = useSelector(getCurrentBtnMenu);
   const isDesktopAndTablet = useMediaQuery(
     'only screen and (min-width: 768px)'
   );
@@ -24,6 +28,7 @@ export const AppBar = () => {
         </Container>
       </header>
       <Outlet />
+      {isMobile && openMenu && <Modal />}
     </>
   );
 };

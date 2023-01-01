@@ -13,7 +13,6 @@ export const BtnMenu = () => {
     !openMenu
       ? dispatch(changeCurrentBtnMenu(true))
       : dispatch(changeCurrentBtnMenu(false));
-    // document.body.classList.toggle('modal-open');
   };
 
   return (

@@ -13,10 +13,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-height: 300px;
-    max-width: 400px;
+    max-height: 796px;
+    height: 100%;
+    max-width: 480px;
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),

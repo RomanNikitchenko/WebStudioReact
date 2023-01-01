@@ -1,34 +1,28 @@
-import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
 import { Container } from 'components/Container';
 import { Navigation } from 'components/Navigation';
 import { ContactsNavList } from 'components/ContactsNavList';
+import { BtnMenu } from 'components/BtnMenu';
 import { useMediaQuery } from '@react-hook/media-query';
-
-const Header = styled.header`
-  background-color: var(--text-color-white);
-  border-bottom: 1px solid var(--block-border-line);
-`;
-
-const ContainerNav = styled.div`
-  display: flex;
-`;
+import s from './AppBar.module.css';
 
 export const AppBar = () => {
   const isDesktopAndTablet = useMediaQuery(
     'only screen and (min-width: 768px)'
   );
+  const isMobile = useMediaQuery('only screen and (max-width: 767px)');
 
   return (
     <>
-      <Header>
+      <header className={s.header}>
         <Container>
-          <ContainerNav>
+          <div className={s.containerNav}>
             <Navigation />
+            {isMobile && <BtnMenu />}
             {isDesktopAndTablet && <ContactsNavList />}
-          </ContainerNav>
+          </div>
         </Container>
-      </Header>
+      </header>
       <Outlet />
     </>
   );

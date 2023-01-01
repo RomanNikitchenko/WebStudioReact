@@ -1,0 +1,19 @@
+.btnMenu {
+    display: flex;
+    padding: 0;
+    margin-left: auto;
+    border: none;
+    background-color: var(--bg-color-white);
+}
+
+.icon{
+    fill: var(--title-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnMenu:hover .icon,
+.btnMenu:focus .icon{
+    fill: var(--accent-color);
+}
+
+

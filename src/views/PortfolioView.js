@@ -5,11 +5,7 @@ import { FilterListBtn } from 'components/FilterListBtn';
 import styled from 'styled-components';
 
 const SectionPortfolio = styled(Section)`
-  @media screen and (min-width: 480px) {
-    padding: 60px 0;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
     padding: 60px 0;
   }
 

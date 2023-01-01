@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/web-studio-react/static/css/main.f3b9dd61.css",
-    "main.js": "/web-studio-react/static/js/main.9a43b51c.js",
+    "main.css": "/web-studio-react/static/css/main.d0d00120.css",
+    "main.js": "/web-studio-react/static/js/main.f09cefb3.js",
     "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.7d0c54eec825811278b45fd3db539c60.svg",
     "index.html": "/web-studio-react/index.html",
-    "main.f3b9dd61.css.map": "/web-studio-react/static/css/main.f3b9dd61.css.map",
-    "main.9a43b51c.js.map": "/web-studio-react/static/js/main.9a43b51c.js.map"
+    "main.d0d00120.css.map": "/web-studio-react/static/css/main.d0d00120.css.map",
+    "main.f09cefb3.js.map": "/web-studio-react/static/js/main.f09cefb3.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3b9dd61.css",
-    "static/js/main.9a43b51c.js"
+    "static/css/main.d0d00120.css",
+    "static/js/main.f09cefb3.js"
   ]
 }

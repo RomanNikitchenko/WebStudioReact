@@ -1,4 +1,4 @@
-const filter = [
+const filterBtn = [
   { id: 'All', name: 'Все' },
   { id: 'Web-sites', name: 'Веб-сайты' },
   { id: 'Applications', name: 'Приложения' },
@@ -145,7 +145,7 @@ const products = [
 ];
 
 export const getfilter = async () => {
-  const response = await filter;
+  const response = await filterBtn;
   return response;
 };
 

@@ -24,20 +24,21 @@ const ProductDetails = () => {
 
   useEffect(() => {
     setStatus('pending');
-    console.log('pending');
 
-    getProductById(id).then(items => {
-      setProducts(items);
-      setStatus('resolved');
-      console.log('resolved');
-    });
+    getProductById(id)
+      .then(items => {
+        setProducts(items);
+        setStatus('resolved');
+      })
+      .catch(setStatus('rejected'));
 
     dispatch(addCurrentType(id));
-  }, [setProducts, id, dispatch]);
+  }, [id, dispatch]);
 
   return (
     <>
-      {status === 'pending' && <div>pending</div>}
+      {status === 'rejected' && <h1>rejected</h1>}
+      {status === 'pending' && <h1>pending</h1>}
       {status === 'resolved' && (
         <PortfolioList>
           {product.map(({ id, img, description, title, text }, index) => {

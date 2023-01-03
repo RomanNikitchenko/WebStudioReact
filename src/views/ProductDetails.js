@@ -16,33 +16,46 @@ const PortfolioList = styled.ul`
 
 const ProductDetails = () => {
   const [product, setProducts] = useState([]);
+  const [status, setStatus] = useState('idle');
+
   const { id } = useParams();
   const dispatch = useDispatch();
   const options = useSelector(getCurrentIndex);
 
   useEffect(() => {
-    getProductById(id).then(setProducts);
+    setStatus('pending');
+    console.log('pending');
+
+    getProductById(id).then(items => {
+      setProducts(items);
+      setStatus('resolved');
+      console.log('resolved');
+    });
+
     dispatch(addCurrentType(id));
   }, [setProducts, id, dispatch]);
 
   return (
-    product && (
-      <PortfolioList>
-        {product.map(({ id, img, description, title, text }, index) => {
-          return (
-            <PortfolioProduct
-              key={id}
-              index={index}
-              img={img}
-              description={description}
-              title={title}
-              text={text}
-              productIndex={options}
-            />
-          );
-        })}
-      </PortfolioList>
-    )
+    <>
+      {status === 'pending' && <div>pending</div>}
+      {status === 'resolved' && (
+        <PortfolioList>
+          {product.map(({ id, img, description, title, text }, index) => {
+            return (
+              <PortfolioProduct
+                key={id}
+                index={index}
+                img={img}
+                description={description}
+                title={title}
+                text={text}
+                productIndex={options}
+              />
+            );
+          })}
+        </PortfolioList>
+      )}
+    </>
   );
 };
 

@@ -4,6 +4,8 @@ import { AppBar } from 'components/AppBar';
 import { getCurrentType } from 'redux/extraInfo/extraInfo-selectors';
 import { useSelector } from 'react-redux';
 
+// import ProductDetails from './views/ProductDetails';
+
 const HomeViev = lazy(() => import('./views/HomeView'));
 const PortfolioView = lazy(() => import('./views/PortfolioView'));
 const ProductDetails = lazy(() => import('./views/ProductDetails'));

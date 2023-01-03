@@ -30,14 +30,17 @@ const ProductDetails = () => {
         setProducts(items);
         setStatus('resolved');
       })
-      .catch(setStatus('rejected'));
+      .catch(error => {
+        console.log(error);
+        setStatus('rejected');
+      });
 
     dispatch(addCurrentType(id));
   }, [id, dispatch]);
 
   return (
     <>
-      {status === 'rejected' && <h1>Not found</h1>}
+      {status === 'rejected' && <h1>NOT FAUND</h1>}
       {status === 'pending' && <h1>pending</h1>}
       {status === 'resolved' && (
         <PortfolioList>

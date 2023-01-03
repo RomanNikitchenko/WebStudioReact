@@ -37,7 +37,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      {status === 'rejected' && <h1>rejected</h1>}
+      {status === 'rejected' && <h1>Not found</h1>}
       {status === 'pending' && <h1>pending</h1>}
       {status === 'resolved' && (
         <PortfolioList>

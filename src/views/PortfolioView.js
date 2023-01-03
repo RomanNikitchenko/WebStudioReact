@@ -21,7 +21,7 @@ const PortfolioView = () => {
       <SectionPortfolio>
         <Container>
           <FilterListBtn />
-          <Suspense fallback={<h1>Загрузаю ProductDetails...</h1>}>
+          <Suspense fallback={<h1>Loading ProductDetails...</h1>}>
             <Outlet />
           </Suspense>
         </Container>

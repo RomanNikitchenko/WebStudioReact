@@ -41,7 +41,7 @@ const ProductDetails = () => {
   return (
     <>
       {status === 'rejected' && <h1>NOT FAUND</h1>}
-      {status === 'pending' && <h1>pending</h1>}
+      {status === 'pending' && <h1>Pending</h1>}
       {status === 'resolved' && (
         <PortfolioList>
           {product.map(({ id, img, description, title, text }, index) => {

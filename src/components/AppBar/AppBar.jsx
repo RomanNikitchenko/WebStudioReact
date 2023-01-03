@@ -28,7 +28,7 @@ export const AppBar = () => {
           </div>
         </Container>
       </header>
-      <Suspense fallback={<h1>Загрузаю...</h1>}>
+      <Suspense fallback={<h1>Loading...</h1>}>
         <Outlet />
       </Suspense>
       {isMobile && openMenu && <Modal />}

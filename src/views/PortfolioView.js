@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Section } from 'components/Section';
 import { Container } from 'components/Container';
@@ -20,7 +21,9 @@ const PortfolioView = () => {
       <SectionPortfolio>
         <Container>
           <FilterListBtn />
-          <Outlet />
+          <Suspense fallback={<h1>Загрузаю ProductDetails...</h1>}>
+            <Outlet />
+          </Suspense>
         </Container>
       </SectionPortfolio>
     </main>

@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 import { getProductById } from '../fakeAPI';
 import styled from 'styled-components';
 import { PortfolioProduct } from 'components/PortfolioProduct';
+import { useSelector, useDispatch } from 'react-redux';
 import { getCurrentIndex } from 'redux/extraInfo/extraInfo-selectors';
-import { useSelector } from 'react-redux';
+import { addCurrentType } from 'redux/extraInfo/extraInfo-slice';
 
 const PortfolioList = styled.ul`
   display: flex;
@@ -13,19 +14,21 @@ const PortfolioList = styled.ul`
   margin-top: -30px;
 `;
 
-export const ProductDetails = () => {
-  const { id } = useParams();
+const ProductDetails = () => {
   const [product, setProducts] = useState([]);
+  const { id } = useParams();
+  const dispatch = useDispatch();
   const options = useSelector(getCurrentIndex);
 
   useEffect(() => {
     getProductById(id).then(setProducts);
-  }, [setProducts, id]);
+    dispatch(addCurrentType(id));
+  }, [setProducts, id, dispatch]);
 
   return (
-    <PortfolioList>
-      {product &&
-        product.map(({ id, img, description, title, text }, index) => {
+    product && (
+      <PortfolioList>
+        {product.map(({ id, img, description, title, text }, index) => {
           return (
             <PortfolioProduct
               key={id}
@@ -38,6 +41,9 @@ export const ProductDetails = () => {
             />
           );
         })}
-    </PortfolioList>
+      </PortfolioList>
+    )
   );
 };
+
+export default ProductDetails;

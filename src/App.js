@@ -1,11 +1,12 @@
-import React from 'react';
+import { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AppBar } from 'components/AppBar';
-import { ProductDetails } from './views/ProductDetails';
-import HomeViev from './views/HomeView';
-import PortfolioView from './views/PortfolioView';
 import { getCurrentType } from 'redux/extraInfo/extraInfo-selectors';
 import { useSelector } from 'react-redux';
+
+const HomeViev = lazy(() => import('./views/HomeView'));
+const PortfolioView = lazy(() => import('./views/PortfolioView'));
+const ProductDetails = lazy(() => import('./views/ProductDetails'));
 
 const App = () => {
   const options = useSelector(getCurrentType);

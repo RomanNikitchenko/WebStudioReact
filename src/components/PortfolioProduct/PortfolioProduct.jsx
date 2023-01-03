@@ -74,3 +74,5 @@ export const PortfolioProduct = ({
     </li>
   );
 };
+
+export default PortfolioProduct;

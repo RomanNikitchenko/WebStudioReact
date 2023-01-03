@@ -22,6 +22,7 @@ const dateSlice = createSlice({
   },
 });
 
-export const { addCurrentType, changeCurrentType, changeCurrentBtnMenu } = dateSlice.actions;
+export const { addCurrentType, changeCurrentType, changeCurrentBtnMenu } =
+  dateSlice.actions;
 
 export default dateSlice.reducer;

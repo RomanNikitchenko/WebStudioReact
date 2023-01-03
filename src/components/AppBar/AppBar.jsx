@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container } from 'components/Container';
 import { Navigation } from 'components/Navigation';
@@ -27,7 +28,9 @@ export const AppBar = () => {
           </div>
         </Container>
       </header>
-      <Outlet />
+      <Suspense fallback={<h1>Загрузаю...</h1>}>
+        <Outlet />
+      </Suspense>
       {isMobile && openMenu && <Modal />}
     </>
   );

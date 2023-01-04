@@ -4,10 +4,7 @@ const initialState = {
   currentType: 'All',
   currentIndex: null,
   currentBtnMenu: false,
-  currentPage: {
-    page: 0,
-    limit: 0,
-  },
+  currentPage: {},
 };
 
 const dateSlice = createSlice({

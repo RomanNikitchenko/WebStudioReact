@@ -30,11 +30,12 @@ export const PortfolioProduct = ({
 
   const handleMouseEnter = evt => {
     if (title.length > 28) {
-      dispatch(
-        changeCurrentType(
-          evt.currentTarget.name % 2 === 1 ? index - 1 : index + 1
-        )
-      );
+      isDesktopAndTablet &&
+        dispatch(
+          changeCurrentType(
+            evt.currentTarget.name % 2 === 1 ? index - 1 : index + 1
+          )
+        );
       setLengthTitle(`${title.trim()}`);
       return;
     }
@@ -43,7 +44,7 @@ export const PortfolioProduct = ({
 
   const handleMouseLeave = evt => {
     if (title.length > 28) {
-      dispatch(changeCurrentType(null));
+      isDesktopAndTablet && dispatch(changeCurrentType(null));
       setLengthTitle(`${title.slice(0, 25).trim()}${'...'}`);
       return;
     }

@@ -8,7 +8,6 @@ export const LoadMoreButton = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('useEffect');
     dispatch(changeCurrentPage({ page, limit }));
   }, [dispatch, page, limit]);
 

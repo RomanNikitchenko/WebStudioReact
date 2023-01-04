@@ -4,7 +4,7 @@ import { changeCurrentPage } from 'redux/extraInfo/extraInfo-slice';
 
 export const LoadMoreButton = () => {
   const [page, setPage] = useState(0);
-  const [limit, setLimit] = useState(0);
+  const [limit, setLimit] = useState(3);
   const dispatch = useDispatch();
 
   useEffect(() => {

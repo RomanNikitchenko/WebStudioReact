@@ -4,6 +4,10 @@ const initialState = {
   currentType: 'All',
   currentIndex: null,
   currentBtnMenu: false,
+  currentPage: {
+    page: 0,
+    limit: 0,
+  },
 };
 
 const dateSlice = createSlice({
@@ -19,10 +23,17 @@ const dateSlice = createSlice({
     changeCurrentBtnMenu: (state, action) => {
       state.currentBtnMenu = action.payload;
     },
+    changeCurrentPage: (state, action) => {
+      state.currentPage = action.payload;
+    },
   },
 });
 
-export const { addCurrentType, changeCurrentType, changeCurrentBtnMenu } =
-  dateSlice.actions;
+export const {
+  addCurrentType,
+  changeCurrentType,
+  changeCurrentBtnMenu,
+  changeCurrentPage,
+} = dateSlice.actions;
 
 export default dateSlice.reducer;

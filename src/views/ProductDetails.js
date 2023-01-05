@@ -23,7 +23,7 @@ const Div = styled.div`
 `;
 
 const ProductDetails = () => {
-  const [product, setProducts] = useState([]);
+  const [items, setItems] = useState([]);
   const [status, setStatus] = useState('idle');
 
   const { id } = useParams();
@@ -35,7 +35,7 @@ const ProductDetails = () => {
 
     getProductById(id)
       .then(items => {
-        setProducts(items);
+        setItems(items);
         setStatus('resolved');
       })
       .catch(error => {
@@ -43,6 +43,12 @@ const ProductDetails = () => {
         setStatus('rejected');
       });
 
+    // return () => {
+    //   console.log('return');
+    //   dispatch(addCurrentType(id));
+    // };
+
+    console.log('return');
     dispatch(addCurrentType(id));
   }, [id, dispatch]);
 
@@ -53,7 +59,7 @@ const ProductDetails = () => {
       {status === 'resolved' && (
         <>
           <PortfolioList>
-            {product.map(({ id, img, description, title, text }, index) => {
+            {items.map(({ id, img, description, title, text }, index) => {
               return (
                 <PortfolioProduct
                   key={id}

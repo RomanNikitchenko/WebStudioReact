@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import s from './SiteNavList.module.css';
 import { useDispatch } from 'react-redux';
 import { changeCurrentBtnMenu } from 'redux/extraInfo/extraInfo-slice';
+import { useMediaQuery } from '@react-hook/media-query';
 
 export const SiteNavList = () => {
   const routes = [
@@ -22,10 +23,13 @@ export const SiteNavList = () => {
     },
   ];
 
+  const isMobile = useMediaQuery('only screen and (max-width: 767px)');
+
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(changeCurrentBtnMenu(false));
+    isMobile && dispatch(changeCurrentBtnMenu(false));
+    return;
   };
 
   const isActiveClick = ({ isActive }) => {

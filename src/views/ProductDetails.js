@@ -17,10 +17,12 @@ const PortfolioList = styled.ul`
 
 const ProductDetails = () => {
   const [items, setItems] = useState([]);
+  const [number, setNumber] = useState(1);
 
   const { id } = useParams();
   const dispatch = useDispatch();
   const options = useSelector(getCurrentIndex);
+  console.log(number);
 
   useEffect(() => {
     getProductById(id)
@@ -31,8 +33,13 @@ const ProductDetails = () => {
         console.log(error);
       });
     
+    setNumber(1);
     dispatch(addCurrentType(id));
   }, [id, dispatch]);
+
+  const handleClick = () => {
+    setNumber(prevNumber => (prevNumber += 1));
+  };
 
   return (
     <>
@@ -52,7 +59,7 @@ const ProductDetails = () => {
         })}
       </PortfolioList>
       <div>
-        <LoadMoreButton />
+        <LoadMoreButton handleClick={handleClick} />
       </div>
     </>
   );

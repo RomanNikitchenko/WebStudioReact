@@ -30,6 +30,7 @@ const ProductDetails = () => {
       .catch(error => {
         console.log(error);
       });
+    
     dispatch(addCurrentType(id));
   }, [id, dispatch]);
 

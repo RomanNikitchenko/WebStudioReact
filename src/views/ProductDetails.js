@@ -15,71 +15,44 @@ const PortfolioList = styled.ul`
   margin-top: -30px;
 `;
 
-const Div = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-`;
-
 const ProductDetails = () => {
   const [items, setItems] = useState([]);
-  const [status, setStatus] = useState('idle');
-  const [unmount, setUnmount] = useState(false);
 
   const { id } = useParams();
   const dispatch = useDispatch();
   const options = useSelector(getCurrentIndex);
 
   useEffect(() => {
-    if (unmount) {
-      setStatus('pending');
-
-      getProductById(id)
-        .then(items => {
-          setItems(items);
-          setStatus('resolved');
-        })
-        .catch(error => {
-          console.log(error);
-          setStatus('rejected');
-        });
-      dispatch(addCurrentType(id));
-
-      return;
-    }
-
-    return () => {
-      setUnmount(true);
-    };
-  }, [id, dispatch, unmount]);
+    getProductById(id)
+      .then(items => {
+        setItems(items);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    dispatch(addCurrentType(id));
+  }, [id, dispatch]);
 
   return (
     <>
-      {status === 'rejected' && <h1>NOT FAUND</h1>}
-      {status === 'pending' && <h1>Pending</h1>}
-      {status === 'resolved' && (
-        <>
-          <PortfolioList>
-            {items.map(({ id, img, description, title, text }, index) => {
-              return (
-                <PortfolioProduct
-                  key={id}
-                  index={index}
-                  img={img}
-                  description={description}
-                  title={title}
-                  text={text}
-                  productIndex={options}
-                />
-              );
-            })}
-          </PortfolioList>
-          <Div>
-            <LoadMoreButton />
-          </Div>
-        </>
-      )}
+      <PortfolioList>
+        {items.map(({ id, img, description, title, text }, index) => {
+          return (
+            <PortfolioProduct
+              key={id}
+              index={index}
+              img={img}
+              description={description}
+              title={title}
+              text={text}
+              productIndex={options}
+            />
+          );
+        })}
+      </PortfolioList>
+      <div>
+        <LoadMoreButton />
+      </div>
     </>
   );
 };

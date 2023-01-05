@@ -25,32 +25,34 @@ const Div = styled.div`
 const ProductDetails = () => {
   const [items, setItems] = useState([]);
   const [status, setStatus] = useState('idle');
+  const [unmount, setUnmount] = useState(false);
 
   const { id } = useParams();
   const dispatch = useDispatch();
   const options = useSelector(getCurrentIndex);
 
   useEffect(() => {
-    setStatus('pending');
+    if (unmount) {
+      setStatus('pending');
 
-    getProductById(id)
-      .then(items => {
-        setItems(items);
-        setStatus('resolved');
-      })
-      .catch(error => {
-        console.log(error);
-        setStatus('rejected');
-      });
+      getProductById(id)
+        .then(items => {
+          setItems(items);
+          setStatus('resolved');
+        })
+        .catch(error => {
+          console.log(error);
+          setStatus('rejected');
+        });
+      dispatch(addCurrentType(id));
 
-    // return () => {
-    //   console.log('return');
-    //   dispatch(addCurrentType(id));
-    // };
+      return;
+    }
 
-    console.log('return');
-    dispatch(addCurrentType(id));
-  }, [id, dispatch]);
+    return () => {
+      setUnmount(true);
+    };
+  }, [id, dispatch, unmount]);
 
   return (
     <>

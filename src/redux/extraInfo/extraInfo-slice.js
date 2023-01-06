@@ -21,7 +21,9 @@ const dateSlice = createSlice({
       state.currentBtnMenu = action.payload;
     },
     changeCurrentPage: (state, action) => {
-      state.currentPage = action.payload;
+      action.payload > 0
+        ? (state.currentPage += action.payload)
+        : (state.currentPage = action.payload);
     },
   },
 });

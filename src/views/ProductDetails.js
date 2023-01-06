@@ -21,6 +21,7 @@ const PortfolioList = styled.ul`
 
 const ProductDetails = () => {
   const [items, setItems] = useState([]);
+  const [hits, setHits] = useState([]);
 
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -30,14 +31,16 @@ const ProductDetails = () => {
 
   useEffect(() => {
     getProductById(id, page, limit)
-      .then(items => {
+      .then(({ partItems, allItems }) => {
+        
         if (page === 0) {
-          setItems([...items]);
+          setItems([...partItems]);
+          setHits(allItems);
           return;
         }
 
         if (page > 0) {
-          setItems(prevItems => [...prevItems, ...items]);
+          setItems(prevItems => [...prevItems, ...partItems]);
           return;
         }
       })
@@ -67,7 +70,7 @@ const ProductDetails = () => {
           })}
         </PortfolioList>
       )}
-      {items.length > 0 && (
+      {items.length !== hits.length && (
         <div>
           <LoadMoreButton />
         </div>

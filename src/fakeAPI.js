@@ -152,14 +152,16 @@ export const getfilter = async () => {
 export const getProductById = async (id, page, limit) => {
   const response = await products;
   const items = await response.filter(({ name }) => name.includes(id));
-  return items.slice(page, limit);
+  return {partItems: items.slice(page, limit), allItems: items };
 };
 
-// export const getProductById = productId => {
+// export const getProductById = (id, page, limit) => {
 //   return new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//       resolve(products.filter(({ name }) => name.includes(productId)));
+//       const response = products;
+//       const items = response.filter(({ name }) => name.includes(id));
+//       resolve({partItems: items.slice(page, limit), allItems: items });
 //       reject('Not found');
-//     }, 250);
+//     }, 1000);
 //   });
 // };

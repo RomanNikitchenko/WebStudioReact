@@ -30,9 +30,6 @@ const ProductDetails = () => {
 
   useEffect(() => {
     getProductById(id, page, limit)
-      // .then(items => {
-      //   setItems(items);
-      // })
       .then(items => {
         if (page === 0) {
           setItems([...items]);
@@ -49,7 +46,7 @@ const ProductDetails = () => {
       });
 
     dispatch(addCurrentType(id));
-  }, [id, dispatch, page]);
+  }, [id, dispatch, page, limit]);
 
   return (
     <>

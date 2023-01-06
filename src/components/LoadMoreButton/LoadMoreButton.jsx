@@ -1,11 +1,15 @@
-import { changeCurrentPage } from 'redux/extraInfo/extraInfo-slice';
+import {
+  changeCurrentPage,
+  changeCurrentLimit,
+} from 'redux/extraInfo/extraInfo-slice';
 import { useDispatch } from 'react-redux';
 
 export const LoadMoreButton = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(changeCurrentPage(1));
+    dispatch(changeCurrentPage(3));
+    dispatch(changeCurrentLimit(3));
   };
 
   return (

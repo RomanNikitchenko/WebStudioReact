@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getProductById } from '../fakeAPI';
 import styled from 'styled-components';
 import { PortfolioProduct } from 'components/PortfolioProduct';
@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   getCurrentIndex,
   getCurrentPage,
+  getCurrentLimit,
 } from 'redux/extraInfo/extraInfo-selectors';
 import { addCurrentType } from 'redux/extraInfo/extraInfo-slice';
 
@@ -20,27 +21,35 @@ const PortfolioList = styled.ul`
 
 const ProductDetails = () => {
   const [items, setItems] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const { id } = useParams();
   const dispatch = useDispatch();
   const options = useSelector(getCurrentIndex);
   const page = useSelector(getCurrentPage);
-  const itemPage = searchParams.get('page') ?? '';
-  console.log(itemPage);
+  const limit = useSelector(getCurrentLimit);
 
   useEffect(() => {
-    getProductById(id)
+    getProductById(id, page, limit)
+      // .then(items => {
+      //   setItems(items);
+      // })
       .then(items => {
-        setItems(items);
+        if (page === 0) {
+          setItems([...items]);
+          return;
+        }
+
+        if (page > 0) {
+          setItems(prevItems => [...prevItems, ...items]);
+          return;
+        }
       })
       .catch(error => {
         console.log(error);
       });
 
-    setSearchParams(page === 0 ? {} : { page: page });
     dispatch(addCurrentType(id));
-  }, [id, dispatch, setSearchParams, page]);
+  }, [id, dispatch, page]);
 
   return (
     <>

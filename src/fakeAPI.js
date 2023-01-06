@@ -149,10 +149,10 @@ export const getfilter = async () => {
   return response;
 };
 
-export const getProductById = async productId => {
+export const getProductById = async (id, page, limit) => {
   const response = await products;
-  const items = await response.filter(({ name }) => name.includes(productId));
-  return items;
+  const items = await response.filter(({ name }) => name.includes(id));
+  return items.slice(page, limit);
 };
 
 // export const getProductById = productId => {

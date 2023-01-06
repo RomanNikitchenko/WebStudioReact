@@ -5,6 +5,7 @@ const initialState = {
   currentIndex: null,
   currentBtnMenu: false,
   currentPage: 0,
+  currentLimit: 3,
 };
 
 const dateSlice = createSlice({
@@ -25,6 +26,10 @@ const dateSlice = createSlice({
         ? (state.currentPage += action.payload)
         : (state.currentPage = action.payload);
     },
+    changeCurrentLimit: (state, action) => {
+      if (action.payload === 3) state.currentLimit += action.payload;
+      if (action.payload === 0) state.currentLimit = 3;
+    },
   },
 });
 
@@ -33,6 +38,7 @@ export const {
   changeCurrentType,
   changeCurrentBtnMenu,
   changeCurrentPage,
+  changeCurrentLimit,
 } = dateSlice.actions;
 
 export default dateSlice.reducer;

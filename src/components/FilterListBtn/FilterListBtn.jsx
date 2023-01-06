@@ -1,7 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { changeCurrentPage } from 'redux/extraInfo/extraInfo-slice';
-import { getCurrentPage } from 'redux/extraInfo/extraInfo-selectors';
+import {
+  changeCurrentPage,
+  changeCurrentLimit,
+} from 'redux/extraInfo/extraInfo-slice';
+import {
+  getCurrentPage,
+  getCurrentLimit,
+} from 'redux/extraInfo/extraInfo-selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { getfilter } from 'fakeAPI';
 import s from './FilterListBtn.module.css';
@@ -10,6 +16,7 @@ export const FilterListBtn = () => {
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
   const page = useSelector(getCurrentPage);
+  const limit = useSelector(getCurrentLimit);
 
   useEffect(() => {
     getfilter().then(setProducts);
@@ -20,7 +27,8 @@ export const FilterListBtn = () => {
   };
 
   const handleClick = () => {
-    page > 0 && dispatch(changeCurrentPage(0));
+    page > 1 && dispatch(changeCurrentPage(0));
+    limit > 3 && dispatch(changeCurrentLimit(0));
     return;
   };
 

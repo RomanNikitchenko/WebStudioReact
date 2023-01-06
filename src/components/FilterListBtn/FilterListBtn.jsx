@@ -20,7 +20,12 @@ export const FilterListBtn = () => {
 
   useEffect(() => {
     getfilter().then(setProducts);
-  }, [setProducts]);
+
+    return () => {
+      dispatch(changeCurrentPage(0));
+      dispatch(changeCurrentLimit(0));
+    };
+  }, [setProducts, dispatch]);
 
   const isActiveClick = ({ isActive }) => {
     return isActive ? `${s.link} ${s.active}` : `${s.link}`;

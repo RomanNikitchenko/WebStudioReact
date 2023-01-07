@@ -27,7 +27,7 @@ export const FilterListBtn = () => {
   };
 
   const handleClick = id => {
-    dispatch(changeCurrentLimit(0));
+    limit > 3 && dispatch(changeCurrentLimit(0));
     dispatch(addCurrentType(id));
   };
 

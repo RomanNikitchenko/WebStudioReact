@@ -155,12 +155,12 @@ export const getProductById = async (id, limit) => {
   return {partItems: items.slice(0, Number(limit)), allItems: items };
 };
 
-// export const getProductById = (id, page, limit) => {
+// export const getProductById = (id, limit) => {
 //   return new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //       const response = products;
 //       const items = response.filter(({ name }) => name.includes(id));
-//       resolve({partItems: items.slice(page, limit), allItems: items });
+//       resolve({partItems: items.slice(0, Number(limit)), allItems: items });
 //       reject('Not found');
 //     }, 1000);
 //   });

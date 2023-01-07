@@ -1,16 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { getProductById } from '../fakeAPI';
 import styled from 'styled-components';
 import { PortfolioProduct } from 'components/PortfolioProduct';
 import { LoadMoreButton } from 'components/LoadMoreButton';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  getCurrentIndex,
-  getCurrentPage,
-  getCurrentLimit,
-} from 'redux/extraInfo/extraInfo-selectors';
-import { addCurrentType } from 'redux/extraInfo/extraInfo-slice';
+import { useSelector } from 'react-redux';
+import { getCurrentIndex } from 'redux/extraInfo/extraInfo-selectors';
+
 
 const PortfolioList = styled.ul`
   display: flex;
@@ -22,34 +18,23 @@ const PortfolioList = styled.ul`
 const ProductDetails = () => {
   const [items, setItems] = useState([]);
   const [hits, setHits] = useState([]);
+  const [searchParams] = useSearchParams();
 
+  const limit = searchParams.get("limit");
   const { id } = useParams();
-  const dispatch = useDispatch();
+
   const options = useSelector(getCurrentIndex);
-  const page = useSelector(getCurrentPage);
-  const limit = useSelector(getCurrentLimit);
 
   useEffect(() => {
-    getProductById(id, page, limit)
+    getProductById(id, limit)
       .then(({ partItems, allItems }) => {
-        
-        if (page === 0) {
-          setItems([...partItems]);
-          setHits(allItems);
-          return;
-        }
-
-        if (page > 0) {
-          setItems(prevItems => [...prevItems, ...partItems]);
-          return;
-        }
+        setItems([...partItems]);
+        setHits(allItems);
       })
       .catch(error => {
         console.log(error);
       });
-
-    dispatch(addCurrentType(id));
-  }, [id, dispatch, page, limit]);
+  }, [id, limit]);
 
   return (
     <>
@@ -69,12 +54,13 @@ const ProductDetails = () => {
             );
           })}
         </PortfolioList>
-      )}
+       )} 
+
       {items.length !== hits.length && (
         <div>
           <LoadMoreButton />
         </div>
-      )}
+     )} 
     </>
   );
 };

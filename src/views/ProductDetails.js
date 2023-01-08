@@ -7,7 +7,6 @@ import { LoadMoreButton } from 'components/LoadMoreButton';
 import { useSelector } from 'react-redux';
 import { getCurrentIndex } from 'redux/extraInfo/extraInfo-selectors';
 
-
 const PortfolioList = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +19,7 @@ const ProductDetails = () => {
   const [hits, setHits] = useState([]);
   const [searchParams] = useSearchParams();
 
-  const limit = searchParams.get("limit");
+  const limit = searchParams.get("limit") ?? 3;
   const { id } = useParams();
 
   const options = useSelector(getCurrentIndex);
@@ -54,13 +53,8 @@ const ProductDetails = () => {
             );
           })}
         </PortfolioList>
-       )} 
-
-      {items.length !== hits.length && (
-        <div>
-          <LoadMoreButton />
-        </div>
-     )} 
+      )} 
+      <LoadMoreButton disabled={items.length === hits.length} />
     </>
   );
 };

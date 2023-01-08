@@ -11,24 +11,29 @@ import s from './FilterListBtn.module.css';
 
 export const FilterListBtn = () => {
   const [products, setProducts] = useState([]);
-  const [, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const [unmount, setUnmount] = useState(true);
 
+  const getLimit = useSelector(getCurrentLimit);
   const dispatch = useDispatch();
 
-  const limit = useSelector(getCurrentLimit);
+  const limit = searchParams.get('limit') ?? getLimit;
 
   useEffect(() => {
-    setSearchParams({ limit: limit });
+    if (unmount) {
+      dispatch(changeCurrentLimit(Number(limit)));
+      setUnmount(false);
+    }
     getfilter().then(setProducts);
-  }, [setProducts, setSearchParams, limit]);
+  }, [setProducts, dispatch, limit, unmount]);
+
+  const handleClick = id => {
+    dispatch(changeCurrentLimit(0));
+    dispatch(addCurrentType(id));
+  };
 
   const isActiveClick = ({ isActive }) => {
     return isActive ? `${s.link} ${s.active}` : `${s.link}`;
-  };
-
-  const handleClick = id => {
-    limit > 3 && dispatch(changeCurrentLimit(0));
-    dispatch(addCurrentType(id));
   };
 
   return (

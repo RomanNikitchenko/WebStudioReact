@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/web-studio-react/static/css/main.95527ff5.css",
-    "main.js": "/web-studio-react/static/js/main.41b932ca.js",
+    "main.js": "/web-studio-react/static/js/main.285142da.js",
     "static/js/561.9207a1a2.chunk.js": "/web-studio-react/static/js/561.9207a1a2.chunk.js",
     "static/css/811.0acb77b7.chunk.css": "/web-studio-react/static/css/811.0acb77b7.chunk.css",
-    "static/js/811.5133fe36.chunk.js": "/web-studio-react/static/js/811.5133fe36.chunk.js",
+    "static/js/811.fe259b56.chunk.js": "/web-studio-react/static/js/811.fe259b56.chunk.js",
     "static/css/596.07dea5ff.chunk.css": "/web-studio-react/static/css/596.07dea5ff.chunk.css",
-    "static/js/596.8add225d.chunk.js": "/web-studio-react/static/js/596.8add225d.chunk.js",
+    "static/js/596.bf3de9d7.chunk.js": "/web-studio-react/static/js/596.bf3de9d7.chunk.js",
     "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.7d0c54eec825811278b45fd3db539c60.svg",
     "index.html": "/web-studio-react/index.html",
     "main.95527ff5.css.map": "/web-studio-react/static/css/main.95527ff5.css.map",
-    "main.41b932ca.js.map": "/web-studio-react/static/js/main.41b932ca.js.map",
+    "main.285142da.js.map": "/web-studio-react/static/js/main.285142da.js.map",
     "561.9207a1a2.chunk.js.map": "/web-studio-react/static/js/561.9207a1a2.chunk.js.map",
     "811.0acb77b7.chunk.css.map": "/web-studio-react/static/css/811.0acb77b7.chunk.css.map",
-    "811.5133fe36.chunk.js.map": "/web-studio-react/static/js/811.5133fe36.chunk.js.map",
+    "811.fe259b56.chunk.js.map": "/web-studio-react/static/js/811.fe259b56.chunk.js.map",
     "596.07dea5ff.chunk.css.map": "/web-studio-react/static/css/596.07dea5ff.chunk.css.map",
-    "596.8add225d.chunk.js.map": "/web-studio-react/static/js/596.8add225d.chunk.js.map"
+    "596.bf3de9d7.chunk.js.map": "/web-studio-react/static/js/596.bf3de9d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95527ff5.css",
-    "static/js/main.41b932ca.js"
+    "static/js/main.285142da.js"
   ]
 }

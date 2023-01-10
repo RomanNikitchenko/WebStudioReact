@@ -152,7 +152,7 @@ export const getfilter = async () => {
 export const getProductById = async (id, limit) => {
   const response = await products;
   const items = await response.filter(({ name }) => name.includes(id));
-  return {partItems: items.slice(0, Number(limit)), allItems: items };
+  return { partItems: items.slice(0, Number(limit)), allItems: items };
 };
 
 // export const getProductById = (id, limit) => {

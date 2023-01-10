@@ -19,7 +19,7 @@ const ProductDetails = () => {
   const [hits, setHits] = useState([]);
   const [searchParams] = useSearchParams();
 
-  const limit = searchParams.get("limit") ?? 3;
+  const limit = searchParams.get('limit') ?? 3;
   const { id } = useParams();
 
   const options = useSelector(getCurrentIndex);
@@ -53,7 +53,7 @@ const ProductDetails = () => {
             );
           })}
         </PortfolioList>
-      )} 
+      )}
       <LoadMoreButton disabled={items.length === hits.length} />
     </>
   );

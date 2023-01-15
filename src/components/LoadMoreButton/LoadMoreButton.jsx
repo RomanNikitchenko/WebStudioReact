@@ -3,8 +3,10 @@ import { useSearchParams } from 'react-router-dom';
 import { changeCurrentLimit } from 'redux/extraInfo/extraInfo-slice';
 import { getCurrentLimit } from 'redux/extraInfo/extraInfo-selectors';
 import { useDispatch, useSelector } from 'react-redux';
+import s from './LoadMoreButton.module.css';
 
 export const LoadMoreButton = ({ disabled }) => {
+  console.log(disabled);
   const [, setSearchParams] = useSearchParams();
 
   const dispatch = useDispatch();
@@ -20,10 +22,13 @@ export const LoadMoreButton = ({ disabled }) => {
   };
 
   return (
-    <div>
-      <button type="button" disabled={disabled} onClick={handleClick}>
-        load more
-      </button>
-    </div>
+    <button
+      className={`${s.button} ${disabled && s.buttonDisabled}`}
+      type="button"
+      disabled={disabled}
+      onClick={handleClick}
+    >
+      load more
+    </button>
   );
 };

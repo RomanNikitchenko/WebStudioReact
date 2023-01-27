@@ -43,12 +43,12 @@ const ProductDetails = () => {
             return (
               <PortfolioProduct
                 key={id}
-                index={index}
                 img={img}
                 description={description}
                 title={title}
                 text={text}
-                productIndex={options}
+                index={index}
+                options={options}
               />
             );
           })}

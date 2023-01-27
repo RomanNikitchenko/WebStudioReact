@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   currentType: 'All',
-  currentIndex: null,
+  currentIndex: [],
   currentBtnMenu: false,
   currentLimit: 3,
 };
@@ -15,7 +15,14 @@ const dateSlice = createSlice({
       state.currentType = action.payload;
     },
     changeCurrentType: (state, action) => {
-      state.currentIndex = action.payload;
+      if (action.payload.length === 0) {
+        state.currentIndex = [];
+        return;
+      }
+      if (state.currentIndex.includes(action.payload)) {
+        return;
+      }
+      state.currentIndex.push(action.payload);
     },
     changeCurrentBtnMenu: (state, action) => {
       state.currentBtnMenu = action.payload;

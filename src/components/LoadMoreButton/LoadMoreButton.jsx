@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import s from './LoadMoreButton.module.css';
 
 export const LoadMoreButton = ({ disabled }) => {
-  console.log(disabled);
   const [, setSearchParams] = useSearchParams();
 
   const dispatch = useDispatch();

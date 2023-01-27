@@ -3,8 +3,12 @@ import { useState, useEffect } from 'react';
 import {
   addCurrentType,
   changeCurrentLimit,
+  changeCurrentType,
 } from 'redux/extraInfo/extraInfo-slice';
-import { getCurrentLimit } from 'redux/extraInfo/extraInfo-selectors';
+import {
+  getCurrentLimit,
+  getCurrentIndex,
+} from 'redux/extraInfo/extraInfo-selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { getfilter } from 'fakeAPI';
 import s from './FilterListBtn.module.css';
@@ -15,6 +19,7 @@ export const FilterListBtn = () => {
   const [unmount, setUnmount] = useState(true);
 
   const getLimit = useSelector(getCurrentLimit);
+  const options = useSelector(getCurrentIndex);
   const dispatch = useDispatch();
 
   const limit = searchParams.get('limit') ?? getLimit;
@@ -30,6 +35,7 @@ export const FilterListBtn = () => {
   const handleClick = id => {
     dispatch(changeCurrentLimit(0));
     dispatch(addCurrentType(id));
+    options.length > 0 && dispatch(changeCurrentType([]));
   };
 
   const isActiveClick = ({ isActive }) => {

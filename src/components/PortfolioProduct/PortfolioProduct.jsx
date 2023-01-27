@@ -22,7 +22,7 @@ export const PortfolioProduct = ({
   useEffect(() => {
     if (title.length > 28 && isDesktopAndTablet === true) {
       dispatch(changeCurrentType(index % 2 === 1 ? index - 1 : index + 1));
-    } else if (isDesktopAndTablet === false) {
+    } else if (title.length > 28 && isDesktopAndTablet === false) {
       dispatch(changeCurrentType([]));
     }
   }, [dispatch, index, title.length, isDesktopAndTablet]);

@@ -25,6 +25,7 @@
     max-width: 100%;
     height: 294px;
     background-color: var(--card-border-color);
+    background-color: tomato;
 }
 
 .portfolioText {

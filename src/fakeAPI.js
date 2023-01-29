@@ -1,3 +1,39 @@
+import img1ListItem354 from 'assets/images/img1-list-item354.jpg';
+import img1ListItem370 from 'assets/images/img1-list-item370.jpg';
+import img1ListItem450 from 'assets/images/img1-list-item450.jpg';
+
+import img2ListItem354 from 'assets/images/img2-list-item354.jpg';
+import img2ListItem370 from 'assets/images/img2-list-item370.jpg';
+import img2ListItem450 from 'assets/images/img2-list-item450.jpg';
+
+import img3ListItem354 from 'assets/images/img3-list-item354.jpg';
+import img3ListItem370 from 'assets/images/img3-list-item370.jpg';
+import img3ListItem450 from 'assets/images/img3-list-item450.jpg';
+
+import img4ListItem354 from 'assets/images/img4-list-item354.jpg';
+import img4ListItem370 from 'assets/images/img4-list-item370.jpg';
+import img4ListItem450 from 'assets/images/img4-list-item450.jpg';
+
+import img5ListItem354 from 'assets/images/img5-list-item354.jpg';
+import img5ListItem370 from 'assets/images/img5-list-item370.jpg';
+import img5ListItem450 from 'assets/images/img5-list-item450.jpg';
+
+import img6ListItem354 from 'assets/images/img6-list-item354.jpg';
+import img6ListItem370 from 'assets/images/img6-list-item370.jpg';
+import img6ListItem450 from 'assets/images/img6-list-item450.jpg';
+
+import img7ListItem354 from 'assets/images/img7-list-item354.jpg';
+import img7ListItem370 from 'assets/images/img7-list-item370.jpg';
+import img7ListItem450 from 'assets/images/img7-list-item450.jpg';
+
+import img8ListItem354 from 'assets/images/img8-list-item354.jpg';
+import img8ListItem370 from 'assets/images/img8-list-item370.jpg';
+import img8ListItem450 from 'assets/images/img8-list-item450.jpg';
+
+import img9ListItem354 from 'assets/images/img9-list-item354.jpg';
+import img9ListItem370 from 'assets/images/img9-list-item370.jpg';
+import img9ListItem450 from 'assets/images/img9-list-item450.jpg';
+
 const filterBtn = [
   { id: 'All', name: 'Все' },
   { id: 'Web-sites', name: 'Веб-сайты' },
@@ -11,10 +47,13 @@ const products = [
     id: '1',
     name: ['All', 'Web-sites'],
     img: {
-      srcset:
-        './images/img1-list-item354.jpg 354w, ./images/img1-list-item370.jpg 370w, ./images/img1-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img1-list-item354.jpg',
+      mobile1x: img1ListItem450,
+      mobile2x: img1ListItem450,
+      tablet1x: img1ListItem354,
+      tablet2x: img1ListItem354,
+      desktop1x: img1ListItem370,
+      desktop2x: img1ListItem370,
+      src: img1ListItem354,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -26,11 +65,14 @@ const products = [
     id: '2',
     name: ['All', 'Design'],
     img: {
-      srcset:
-        './images/img2-list-item354.jpg 354w, ./images/img2-list-item370.jpg 370w, ./images/img2-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img2-list-item354.jpg',
-      alt: 'Дизайн постера Новый Орлеан против Голден Стар',
+      mobile1x: img2ListItem450,
+      mobile2x: img2ListItem450,
+      tablet1x: img2ListItem354,
+      tablet2x: img2ListItem354,
+      desktop1x: img2ListItem370,
+      desktop2x: img2ListItem370,
+      src: img2ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',
@@ -41,11 +83,14 @@ const products = [
     id: '3',
     name: ['All', 'Applications'],
     img: {
-      srcset:
-        './images/img3-list-item354.jpg 354w, ./images/img3-list-item370.jpg 370w, ./images/img3-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img3-list-item354.jpg',
-      alt: 'Приложениея для ресторана морепродуктов Сифуд',
+      mobile1x: img3ListItem450,
+      mobile2x: img3ListItem450,
+      tablet1x: img3ListItem354,
+      tablet2x: img3ListItem354,
+      desktop1x: img3ListItem370,
+      desktop2x: img3ListItem370,
+      src: img3ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',
@@ -56,11 +101,14 @@ const products = [
     id: '4',
     name: ['All', 'Marketing'],
     img: {
-      srcset:
-        './images/img4-list-item354.jpg 354w, ./images/img4-list-item370.jpg 370w, ./images/img4-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img4-list-item354.jpg',
-      alt: 'Проект прайм Маркетинг',
+      mobile1x: img4ListItem450,
+      mobile2x: img4ListItem450,
+      tablet1x: img4ListItem354,
+      tablet2x: img4ListItem354,
+      desktop1x: img4ListItem370,
+      desktop2x: img4ListItem370,
+      src: img4ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',
@@ -71,11 +119,14 @@ const products = [
     id: '5',
     name: ['All', 'Applications'],
     img: {
-      srcset:
-        './images/img5-list-item354.jpg 354w, ./images/img5-list-item370.jpg 370w, ./images/img5-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img5-list-item354.jpg',
-      alt: 'Проект Коробки Приложение',
+      mobile1x: img5ListItem450,
+      mobile2x: img5ListItem450,
+      tablet1x: img5ListItem354,
+      tablet2x: img5ListItem354,
+      desktop1x: img5ListItem370,
+      desktop2x: img5ListItem370,
+      src: img5ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',
@@ -86,11 +137,14 @@ const products = [
     id: '6',
     name: ['All', 'Web-sites'],
     img: {
-      srcset:
-        './images/img6-list-item354.jpg 354w, ./images/img6-list-item370.jpg 370w, ./images/img6-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img6-list-item354.jpg',
-      alt: 'Веб-сайт У вдохновения нет границ',
+      mobile1x: img6ListItem450,
+      mobile2x: img6ListItem450,
+      tablet1x: img6ListItem354,
+      tablet2x: img6ListItem354,
+      desktop1x: img6ListItem370,
+      desktop2x: img6ListItem370,
+      src: img6ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',
@@ -101,11 +155,14 @@ const products = [
     id: '7',
     name: ['All', 'Design'],
     img: {
-      srcset:
-        './images/img7-list-item354.jpg 354w, ./images/img7-list-item370.jpg 370w, ./images/img7-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img7-list-item354.jpg',
-      alt: 'дизайн издания с названием Ограниченный выпуск',
+      mobile1x: img7ListItem450,
+      mobile2x: img7ListItem450,
+      tablet1x: img7ListItem354,
+      tablet2x: img7ListItem354,
+      desktop1x: img7ListItem370,
+      desktop2x: img7ListItem370,
+      src: img7ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',
@@ -116,11 +173,14 @@ const products = [
     id: '8',
     name: ['All', 'Marketing'],
     img: {
-      srcset:
-        './images/img8-list-item354.jpg 354w, ./images/img8-list-item370.jpg 370w, ./images/img8-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img8-list-item354.jpg',
-      alt: 'Проект ЛАБ Маркетинг',
+      mobile1x: img8ListItem450,
+      mobile2x: img8ListItem450,
+      tablet1x: img8ListItem354,
+      tablet2x: img8ListItem354,
+      desktop1x: img8ListItem370,
+      desktop2x: img8ListItem370,
+      src: img8ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',
@@ -131,11 +191,14 @@ const products = [
     id: '9',
     name: ['All', 'Applications'],
     img: {
-      srcset:
-        './images/img9-list-item354.jpg 354w, ./images/img9-list-item370.jpg 370w, ./images/img9-list-item450.jpg 450w',
-      sizes: '(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw',
-      src: './images/img9-list-item354.jpg',
-      alt: 'Приложение Растущий бизнес',
+      mobile1x: img9ListItem450,
+      mobile2x: img9ListItem450,
+      tablet1x: img9ListItem354,
+      tablet2x: img9ListItem354,
+      desktop1x: img9ListItem370,
+      desktop2x: img9ListItem370,
+      src: img9ListItem354,
+      alt: 'Технокряк Веб-сайт',
     },
     description:
       'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.',

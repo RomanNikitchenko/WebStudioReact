@@ -31,7 +31,25 @@ export const PortfolioProduct = ({
     <li className={s.portfolioItem}>
       <NavLink onClick={e => e.preventDefault()} className={s.portfolioLink}>
         <div className={s.portfolioDescription}>
-          <img alt={img.alt} className={s.portfolioImg} />
+          <picture>
+            {/* 370px */}
+            <source
+              srcSet={`${img.desktop1x} 1x, ${img.desktop2x} 2x`}
+              media="(min-width: 1200px)"
+            />
+            {/* 354px */}
+            <source
+              srcSet={`${img.tablet1x} 1x, ${img.tablet2x} 2x`}
+              media="(min-width: 768px)"
+            />
+            {/* 450px */}
+            <source
+              srcSet={`${img.mobile1x} 1x, ${img.mobile2x} 2x`}
+              media="(max-width: 767px)"
+            />
+            {/* 354px */}
+            <img className={s.portfolioImg} src={img.src} alt={img.alt} />
+          </picture>
           <p className={s.portfolioText}>{description}</p>
         </div>
         <div className={`${s.thumb} ${options.includes(index) && s.thumbItem}`}>

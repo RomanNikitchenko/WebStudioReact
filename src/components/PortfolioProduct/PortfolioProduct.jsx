@@ -32,6 +32,7 @@ export const PortfolioProduct = ({
       <NavLink onClick={e => e.preventDefault()} className={s.portfolioLink}>
         <div className={s.portfolioDescription}>
           <picture>
+            {/* 370px */}
             <source
               srcSet={`${img.desktop1x} 1x, ${img.desktop2x} 2x`}
               media="(min-width: 1200px)"

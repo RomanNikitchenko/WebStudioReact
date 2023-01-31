@@ -80,7 +80,6 @@ const products = [
       tablet2x: img1ListItem354F2x,
       desktop1x: img1ListItem370,
       desktop2x: img1ListItem370F2x,
-      src: img1ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -98,7 +97,6 @@ const products = [
       tablet2x: img2ListItem354F2x,
       desktop1x: img2ListItem370,
       desktop2x: img2ListItem370F2x,
-      src: img2ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -116,7 +114,6 @@ const products = [
       tablet2x: img3ListItem354F2x,
       desktop1x: img3ListItem370,
       desktop2x: img3ListItem370F2x,
-      src: img3ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -134,7 +131,6 @@ const products = [
       tablet2x: img4ListItem354F2x,
       desktop1x: img4ListItem370,
       desktop2x: img4ListItem370F2x,
-      src: img4ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -152,7 +148,6 @@ const products = [
       tablet2x: img5ListItem354F2x,
       desktop1x: img5ListItem370,
       desktop2x: img5ListItem370F2x,
-      src: img5ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -170,7 +165,6 @@ const products = [
       tablet2x: img6ListItem354F2x,
       desktop1x: img6ListItem370,
       desktop2x: img6ListItem370F2x,
-      src: img6ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -188,7 +182,6 @@ const products = [
       tablet2x: img7ListItem354F2x,
       desktop1x: img7ListItem370,
       desktop2x: img7ListItem370F2x,
-      src: img7ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -206,7 +199,6 @@ const products = [
       tablet2x: img8ListItem354F2x,
       desktop1x: img8ListItem370,
       desktop2x: img8ListItem370F2x,
-      src: img8ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:
@@ -224,7 +216,6 @@ const products = [
       tablet2x: img9ListItem354F2x,
       desktop1x: img9ListItem370,
       desktop2x: img9ListItem370F2x,
-      src: img9ListItem450,
       alt: 'Технокряк Веб-сайт',
     },
     description:

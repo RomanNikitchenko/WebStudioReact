@@ -34,28 +34,29 @@ export const PortfolioProduct = ({
         <div className={s.portfolioDescription}>
           {/* <picture>
             <source
-                srcSet={`${img.desktop1x} 1x, ${img.desktop2x} 2x`}
-                media="(min-width: 1200px)"
-              />
+              srcSet={`${img.desktop1x} 1x, ${img.desktop2x} 2x`}
+              media="(min-width: 1200px)"
+            />
             <source
-                srcSet={`${img.tablet1x} 1x, ${img.tablet2x} 2x`}
-                media="(min-width: 768px)"
-              />
+              srcSet={`${img.tablet1x} 1x, ${img.tablet2x} 2x`}
+              media="(min-width: 768px)"
+            />
             <source
-                srcSet={`${img.mobile1x} 1x, ${img.mobile2x} 2x`}
-                media="(max-width: 767px)"
-              />
+              srcSet={`${img.mobile1x} 1x, ${img.mobile2x} 2x`}
+              media="(max-width: 767px)"
+            />
             <img
-                srcSet={`${img.desktop1x} 370w, ${img.desktop2x} 740w, ${img.tablet1x} 354w, ${img.tablet2x} 708w, ${img.mobile1x} 450w, ${img.mobile2x} 900w,`}
-                sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
-                src={img.src}
-                alt={img.alt}
-              />
+              srcSet={`${img.desktop1x} 370w, ${img.desktop2x} 740w, ${img.tablet1x} 354w, ${img.tablet2x} 708w, ${img.mobile1x} 450w, ${img.mobile2x} 900w,`}
+              sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+              src={img.src}
+              alt={img.alt}
+            />
           </picture> */}
           <LazyImage
+            portfolioImg={s.portfolioImg}
             srcSet={`${img.desktop1x} 370w, ${img.desktop2x} 740w, ${img.tablet1x} 354w, ${img.tablet2x} 708w, ${img.mobile1x} 450w, ${img.mobile2x} 900w,`}
-            sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
-            src={img.src}
+            sizes="(max-width: 767px) 450px, (min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+            src={img.mobile1x}
             alt={img.alt}
           />
           <p className={s.portfolioText}>{description}</p>

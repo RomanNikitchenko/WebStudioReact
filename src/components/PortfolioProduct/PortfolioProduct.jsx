@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { changeCurrentType } from 'redux/extraInfo/extraInfo-slice';
 import s from './PortfolioProduct.module.css';
 import { useMediaQuery } from '@react-hook/media-query';
-import { LazyImage } from 'lazy-image';
+import LazyImage from 'lazy-image';
 
 export const PortfolioProduct = ({
   img,
@@ -36,7 +36,7 @@ export const PortfolioProduct = ({
             portfolioImg={s.portfolioImg}
             srcSet={`${img.desktop1x} 370w, ${img.desktop2x} 740w, ${img.tablet1x} 354w, ${img.tablet2x} 708w, ${img.mobile1x} 450w, ${img.mobile2x} 900w,`}
             sizes="(max-width: 767px) 450px, (min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
-            src={img.mobile1x}
+            dataSrc={img}
             alt={img.alt}
           />
           <p className={s.portfolioText}>{description}</p>
@@ -49,5 +49,3 @@ export const PortfolioProduct = ({
     </li>
   );
 };
-
-export default PortfolioProduct;

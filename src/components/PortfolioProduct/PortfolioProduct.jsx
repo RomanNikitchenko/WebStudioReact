@@ -32,13 +32,7 @@ export const PortfolioProduct = ({
     <li className={s.portfolioItem}>
       <NavLink onClick={e => e.preventDefault()} className={s.portfolioLink}>
         <div className={s.portfolioDescription}>
-          <LazyImage
-            portfolioImg={s.portfolioImg}
-            srcSet={`${img.desktop1x} 370w, ${img.desktop2x} 740w, ${img.tablet1x} 354w, ${img.tablet2x} 708w, ${img.mobile1x} 450w, ${img.mobile2x} 900w,`}
-            sizes="(max-width: 767px) 450px, (min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
-            dataSrc={img}
-            alt={img.alt}
-          />
+          <LazyImage portfolioImg={s.portfolioImg} img={img} />
           <p className={s.portfolioText}>{description}</p>
         </div>
         <div className={`${s.thumb} ${options.includes(index) && s.thumbItem}`}>

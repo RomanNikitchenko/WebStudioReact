@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import LazyLoad from 'vanilla-lazyload';
 import lazyloadConfig from './config/lazyioad';
 import { useMediaQuery } from '@react-hook/media-query';
@@ -7,9 +7,8 @@ if (!document.lazyLoadInstance) {
   document.lazyLoadInstance = new LazyLoad(lazyloadConfig);
 }
 
-const LazyImage = ({ portfolioImg, img }) => {
-  const { alt, mobile1x, tablet1x, desktop1x, mobile2x, tablet2x, desktop2x } =
-    img;
+const LazyImage = ({ portfolioImg, img, isHidden }) => {
+  const [imgHidden, setImgHidden] = useState(true);
 
   const isMobile = useMediaQuery('only screen and (max-width: 767px)');
   const isTablet = useMediaQuery(
@@ -17,8 +16,20 @@ const LazyImage = ({ portfolioImg, img }) => {
   );
   const isDesktop = useMediaQuery('only screen and (min-width: 1200px)');
 
+  const {
+    mobileBase450px,
+    alt,
+    mobile1x,
+    tablet1x,
+    desktop1x,
+    mobile2x,
+    tablet2x,
+    desktop2x,
+  } = img;
+
   useEffect(() => {
     document.lazyLoadInstance.update();
+    setImgHidden(false);
   }, []);
 
   const imageDevice = () => {
@@ -35,7 +46,7 @@ const LazyImage = ({ portfolioImg, img }) => {
 
   const baseImage = () => {
     if (isMobile) {
-      return 'data:image/gif;base64,R0lGODlhSwAxAIAAAP///wAAACH5BAEAAAEALAAAAABLADEAAAJAjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1iCgA7';
+      return mobileBase450px;
     }
     if (isTablet) {
       return 'data:image/gif;base64,R0lGODlhOwAxAIAAAP///wAAACH5BAEAAAEALAAAAAA7ADEAAAI4jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvPZKgAAOw==';
@@ -61,7 +72,7 @@ const LazyImage = ({ portfolioImg, img }) => {
       />
 
       <img
-        className={`${'lazy'} ${portfolioImg}`}
+        className={`${'lazy'} ${portfolioImg} ${imgHidden ? isHidden : ''}`}
         src={baseImage()}
         data-src={imageDevice()}
         alt={alt}

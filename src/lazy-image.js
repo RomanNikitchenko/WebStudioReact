@@ -23,9 +23,6 @@ const LazyImage = ({ portfolioImg, img }) => {
     mobile2x,
     tablet2x,
     desktop2x,
-    // mobileBase450px,
-    // tableBase354px,
-    // desktopBase370px,
   } = img;
 
   useEffect(() => {
@@ -47,15 +44,12 @@ const LazyImage = ({ portfolioImg, img }) => {
   const baseImage = () => {
     if (isMobile) {
       return "data:image/gif;base64,R0lGODlhSwAxAIAAAP///wAAACH5BAEAAAEALAAAAABLADEAAAJAjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1iCgA7"
-      // return mobileBase450px;
     }
     if (isTablet) {
       return "data:image/gif;base64,R0lGODlhOwAxAIAAAP///wAAACH5BAEAAAEALAAAAAA7ADEAAAI4jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvPZKgAAOw=="
-      // return tableBase354px;
     }
     if (isDesktop) {
       return "data:image/gif;base64,R0lGODlhuQCTAIAAAP///wAAACH5BAEAAAEALAAAAAC5AJMAAALPjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7OvloAADs="
-      // return desktopBase370px;
     }
   };
 

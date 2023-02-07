@@ -43,7 +43,7 @@ const LazyImage = ({ portfolioImg, img }) => {
       return desktop1x;
     }
   };
-
+  
   const baseImage = () => {
     if (isMobile) {
       return mobileBase450px;

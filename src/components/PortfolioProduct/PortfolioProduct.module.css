@@ -25,15 +25,8 @@
     max-width: 100%;
     max-height: 294px;
     background-color: var(--card-border-color);
-    background-image: url("data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f ///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7");
-    opacity: 1;
-    transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.isHidden{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    filter: blur(5px);
+    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolioText {

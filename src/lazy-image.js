@@ -73,8 +73,8 @@ const LazyImage = ({ portfolioImg, img }) => {
 
       <img
         className={`${'lazy'} ${portfolioImg}`}
-        src={baseImage()}
         data-src={imageDevice()}
+        src={baseImage()}
         alt={alt}
       />
     </picture>

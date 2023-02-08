@@ -10,9 +10,7 @@ export const BtnMenu = () => {
   const openMenu = useSelector(getCurrentBtnMenu);
 
   const handleBtnClick = () => {
-    !openMenu
-      ? dispatch(changeCurrentBtnMenu(true))
-      : dispatch(changeCurrentBtnMenu(false));
+    dispatch(changeCurrentBtnMenu(!openMenu));
   };
 
   return (

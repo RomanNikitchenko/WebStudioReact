@@ -57,9 +57,6 @@
 }
 
 .heroTitle {
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
@@ -68,13 +65,17 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
     color: #FFFFFF;
 }
 
 @media screen and (min-width: 1200px) {
     .heroTitle {
-        max-width: 696px;
         font-size: 44px;
         line-height: 1.363;
+        max-width: 696px;
     }
 }

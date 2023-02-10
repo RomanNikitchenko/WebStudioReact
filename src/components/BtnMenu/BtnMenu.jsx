@@ -1,4 +1,4 @@
-import icon from 'assets/symbol-defs.svg';
+import { IconCloseAndOpen } from 'components/IconCloseAndOpen';
 import s from './BtnMenu.module.css';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,9 +15,7 @@ export const BtnMenu = () => {
 
   return (
     <button className={s.btnMenu} onClick={handleBtnClick}>
-      <svg className={s.icon} width="40" height="40">
-        <use href={`${icon}#${openMenu ? 'menuClose' : 'menuOpen'}`}></use>
-      </svg>
+      <IconCloseAndOpen s={s} openMenu={openMenu} />
     </button>
   );
 };

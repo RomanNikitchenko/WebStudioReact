@@ -1,0 +1,1 @@
+export { IconCloseAndOpen } from './IconCloseAndOpen';

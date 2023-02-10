@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/web-studio-react/static/css/main.a3910be1.css",
-    "main.js": "/web-studio-react/static/js/main.d9c5494c.js",
-    "static/css/108.efa0bbcb.chunk.css": "/web-studio-react/static/css/108.efa0bbcb.chunk.css",
+    "main.js": "/web-studio-react/static/js/main.c538dd31.js",
+    "static/css/108.2498180e.chunk.css": "/web-studio-react/static/css/108.2498180e.chunk.css",
     "static/js/108.f08a5da9.chunk.js": "/web-studio-react/static/js/108.f08a5da9.chunk.js",
     "static/css/934.99ad5273.chunk.css": "/web-studio-react/static/css/934.99ad5273.chunk.css",
     "static/js/934.14210e2f.chunk.js": "/web-studio-react/static/js/934.14210e2f.chunk.js",
@@ -48,8 +48,8 @@
     "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.7d0c54eec825811278b45fd3db539c60.svg",
     "index.html": "/web-studio-react/index.html",
     "main.a3910be1.css.map": "/web-studio-react/static/css/main.a3910be1.css.map",
-    "main.d9c5494c.js.map": "/web-studio-react/static/js/main.d9c5494c.js.map",
-    "108.efa0bbcb.chunk.css.map": "/web-studio-react/static/css/108.efa0bbcb.chunk.css.map",
+    "main.c538dd31.js.map": "/web-studio-react/static/js/main.c538dd31.js.map",
+    "108.2498180e.chunk.css.map": "/web-studio-react/static/css/108.2498180e.chunk.css.map",
     "108.f08a5da9.chunk.js.map": "/web-studio-react/static/js/108.f08a5da9.chunk.js.map",
     "934.99ad5273.chunk.css.map": "/web-studio-react/static/css/934.99ad5273.chunk.css.map",
     "934.14210e2f.chunk.js.map": "/web-studio-react/static/js/934.14210e2f.chunk.js.map",
@@ -59,6 +59,6 @@
   },
   "entrypoints": [
     "static/css/main.a3910be1.css",
-    "static/js/main.d9c5494c.js"
+    "static/js/main.c538dd31.js"
   ]
 }

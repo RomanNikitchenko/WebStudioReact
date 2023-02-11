@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/web-studio-react/static/css/main.a3910be1.css",
-    "main.js": "/web-studio-react/static/js/main.cfee3710.js",
-    "static/css/108.2498180e.chunk.css": "/web-studio-react/static/css/108.2498180e.chunk.css",
-    "static/js/108.c08050ef.chunk.js": "/web-studio-react/static/js/108.c08050ef.chunk.js",
+    "main.css": "/web-studio-react/static/css/main.ada955fd.css",
+    "main.js": "/web-studio-react/static/js/main.dc955098.js",
+    "static/css/108.3668289b.chunk.css": "/web-studio-react/static/css/108.3668289b.chunk.css",
+    "static/js/108.f0c8790c.chunk.js": "/web-studio-react/static/js/108.f0c8790c.chunk.js",
     "static/css/934.99ad5273.chunk.css": "/web-studio-react/static/css/934.99ad5273.chunk.css",
     "static/js/934.14210e2f.chunk.js": "/web-studio-react/static/js/934.14210e2f.chunk.js",
     "static/css/317.8d92483c.chunk.css": "/web-studio-react/static/css/317.8d92483c.chunk.css",
@@ -47,10 +47,10 @@
     "static/media/img4-list-item354@2x.jpg": "/web-studio-react/static/media/img4-list-item354@2x.30430951fa3cd11f960c.jpg",
     "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.7d0c54eec825811278b45fd3db539c60.svg",
     "index.html": "/web-studio-react/index.html",
-    "main.a3910be1.css.map": "/web-studio-react/static/css/main.a3910be1.css.map",
-    "main.cfee3710.js.map": "/web-studio-react/static/js/main.cfee3710.js.map",
-    "108.2498180e.chunk.css.map": "/web-studio-react/static/css/108.2498180e.chunk.css.map",
-    "108.c08050ef.chunk.js.map": "/web-studio-react/static/js/108.c08050ef.chunk.js.map",
+    "main.ada955fd.css.map": "/web-studio-react/static/css/main.ada955fd.css.map",
+    "main.dc955098.js.map": "/web-studio-react/static/js/main.dc955098.js.map",
+    "108.3668289b.chunk.css.map": "/web-studio-react/static/css/108.3668289b.chunk.css.map",
+    "108.f0c8790c.chunk.js.map": "/web-studio-react/static/js/108.f0c8790c.chunk.js.map",
     "934.99ad5273.chunk.css.map": "/web-studio-react/static/css/934.99ad5273.chunk.css.map",
     "934.14210e2f.chunk.js.map": "/web-studio-react/static/js/934.14210e2f.chunk.js.map",
     "317.8d92483c.chunk.css.map": "/web-studio-react/static/css/317.8d92483c.chunk.css.map",
@@ -58,7 +58,7 @@
     "396.3da4bf97.chunk.js.map": "/web-studio-react/static/js/396.3da4bf97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3910be1.css",
-    "static/js/main.cfee3710.js"
+    "static/css/main.ada955fd.css",
+    "static/js/main.dc955098.js"
   ]
 }

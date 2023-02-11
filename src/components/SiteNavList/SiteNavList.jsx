@@ -1,10 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import s from './SiteNavList.module.css';
-import { useDispatch } from 'react-redux';
-import { changeCurrentBtnMenu } from 'redux/extraInfo/extraInfo-slice';
-import { useMediaQuery } from '@react-hook/media-query';
 
-export const SiteNavList = () => {
+export const SiteNavList = ({ handleBtnClick }) => {
   const routes = [
     {
       id: 'studio',
@@ -23,15 +20,6 @@ export const SiteNavList = () => {
     },
   ];
 
-  const isMobile = useMediaQuery('only screen and (max-width: 767px)');
-
-  const dispatch = useDispatch();
-
-  const handleClick = () => {
-    isMobile && dispatch(changeCurrentBtnMenu(false));
-    return;
-  };
-
   const isActiveClick = ({ isActive }) => {
     return isActive ? `${s.link} ${s.active}` : `${s.link}`;
   };
@@ -41,7 +29,11 @@ export const SiteNavList = () => {
       {routes.map(({ id, name, route }) => {
         return (
           <li key={id} className={s.item}>
-            <NavLink to={route} className={isActiveClick} onClick={handleClick}>
+            <NavLink
+              to={route}
+              className={isActiveClick}
+              onClick={handleBtnClick}
+            >
               {name}
             </NavLink>
           </li>

@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   currentType: 'All',
   currentIndex: [],
-  currentBtnMenu: false,
   currentLimit: 3,
 };
 
@@ -24,9 +23,6 @@ const dateSlice = createSlice({
       }
       state.currentIndex.push(action.payload);
     },
-    changeCurrentBtnMenu: (state, action) => {
-      state.currentBtnMenu = action.payload;
-    },
     changeCurrentLimit: (state, action) => {
       if (action.payload >= 3) state.currentLimit = action.payload;
       if (action.payload === 1) state.currentLimit += 3;
@@ -38,7 +34,6 @@ const dateSlice = createSlice({
 export const {
   addCurrentType,
   changeCurrentType,
-  changeCurrentBtnMenu,
   changeCurrentLimit,
 } = dateSlice.actions;
 

@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/web-studio-react/static/css/main.ada955fd.css",
-    "main.js": "/web-studio-react/static/js/main.dc955098.js",
-    "static/css/108.3668289b.chunk.css": "/web-studio-react/static/css/108.3668289b.chunk.css",
+    "main.js": "/web-studio-react/static/js/main.38a7ef25.js",
+    "static/css/108.5ec82091.chunk.css": "/web-studio-react/static/css/108.5ec82091.chunk.css",
     "static/js/108.f0c8790c.chunk.js": "/web-studio-react/static/js/108.f0c8790c.chunk.js",
     "static/css/934.99ad5273.chunk.css": "/web-studio-react/static/css/934.99ad5273.chunk.css",
     "static/js/934.14210e2f.chunk.js": "/web-studio-react/static/js/934.14210e2f.chunk.js",
     "static/css/317.8d92483c.chunk.css": "/web-studio-react/static/css/317.8d92483c.chunk.css",
     "static/js/317.d1a6638f.chunk.js": "/web-studio-react/static/js/317.d1a6638f.chunk.js",
     "static/js/396.3da4bf97.chunk.js": "/web-studio-react/static/js/396.3da4bf97.chunk.js",
+    "static/media/hero-desktop1600@2x.jpg": "/web-studio-react/static/media/hero-desktop1600@2x.1845d10988e6759310fc.jpg",
     "static/media/hero-tablet768@2x.jpg": "/web-studio-react/static/media/hero-tablet768@2x.d4482bcebd99362bf92d.jpg",
     "static/media/hero-desktop1600.jpg": "/web-studio-react/static/media/hero-desktop1600.217911c7d00d894c8021.jpg",
     "static/media/hero-mobile480@2x.jpg": "/web-studio-react/static/media/hero-mobile480@2x.54e7955a75e0f3e53100.jpg",
@@ -48,8 +49,8 @@
     "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.7d0c54eec825811278b45fd3db539c60.svg",
     "index.html": "/web-studio-react/index.html",
     "main.ada955fd.css.map": "/web-studio-react/static/css/main.ada955fd.css.map",
-    "main.dc955098.js.map": "/web-studio-react/static/js/main.dc955098.js.map",
-    "108.3668289b.chunk.css.map": "/web-studio-react/static/css/108.3668289b.chunk.css.map",
+    "main.38a7ef25.js.map": "/web-studio-react/static/js/main.38a7ef25.js.map",
+    "108.5ec82091.chunk.css.map": "/web-studio-react/static/css/108.5ec82091.chunk.css.map",
     "108.f0c8790c.chunk.js.map": "/web-studio-react/static/js/108.f0c8790c.chunk.js.map",
     "934.99ad5273.chunk.css.map": "/web-studio-react/static/css/934.99ad5273.chunk.css.map",
     "934.14210e2f.chunk.js.map": "/web-studio-react/static/js/934.14210e2f.chunk.js.map",
@@ -59,6 +60,6 @@
   },
   "entrypoints": [
     "static/css/main.ada955fd.css",
-    "static/js/main.dc955098.js"
+    "static/js/main.38a7ef25.js"
   ]
 }

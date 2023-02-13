@@ -32,7 +32,7 @@ export const PortfolioProduct = ({
     <li className={s.portfolioItem}>
       <NavLink onClick={e => e.preventDefault()} className={s.portfolioLink}>
         <div className={s.portfolioDescription}>
-          <LazyImage portfolioImg={s.portfolioImg} img={img} />
+          <LazyImage className={s.portfolioImg} img={img} />
           <p className={s.portfolioText}>{description}</p>
         </div>
         <div className={`${s.thumb} ${options.includes(index) && s.thumbItem}`}>

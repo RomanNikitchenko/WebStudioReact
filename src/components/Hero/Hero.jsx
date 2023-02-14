@@ -2,21 +2,13 @@ import { useState } from 'react';
 import { Section } from 'components/Section';
 import { BtnMenu } from 'components/BtnMenu';
 import { Modal } from 'components/Modal';
-import { IconCloseAndOpen } from 'components/IconCloseAndOpen';
+import { IconSvg } from 'components/IconSvg';
 import s from './Hero.module.css';
-
-// import heroMobile480 from 'assets/images/hero-mobile480.jpg';
-// import heroMobile480F2x from 'assets/images/hero-mobile480@2x.jpg';
-// import heroTablet768 from 'assets/images/hero-tablet768.jpg';
-// import heroTablet768F2x from 'assets/images/hero-tablet768@2x.jpg';
-// import heroDesktop1600 from 'assets/images/hero-desktop1600.jpg';
-// import heroDesktop1600F2x from 'assets/images/hero-desktop1600@2x.jpg';
 
 export const Hero = () => {
   const [openModal, setOpenModal] = useState(false);
   const [isHidden, setIsHidden] = useState(true);
   const [isPressed, setIsPressed] = useState(false);
-  // const [bgImg, setBgImg] = useState(false);
 
   const handleBtnClick = () => {
     if (isPressed) {
@@ -55,8 +47,13 @@ export const Hero = () => {
 
       {openModal && (
         <Modal className={s} isHidden={isHidden}>
-          <BtnMenu className={s.btnMenu} handleBtnClick={handleBtnClick}>
-            <IconCloseAndOpen className={s} iconBtn="menuClose" />
+          <BtnMenu className={s.btnClose} handleBtnClick={handleBtnClick}>
+            <IconSvg
+              className={s.icon}
+              iconId="modalClose"
+              width="11"
+              height="11"
+            />
           </BtnMenu>
         </Modal>
       )}

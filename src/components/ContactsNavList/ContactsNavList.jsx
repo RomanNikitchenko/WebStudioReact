@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import s from './ContactsNavList.module.css';
 import { useMediaQuery } from '@react-hook/media-query';
-import icon from 'assets/symbol-defs.svg';
+import { IconSvg } from 'components/IconSvg';
 
 export const ContactsNavList = () => {
   const [widthMailto, setWidthMailto] = useState('14');
@@ -34,18 +34,24 @@ export const ContactsNavList = () => {
     <ul className={s.list}>
       <li className={s.item}>
         <NavLink className={s.link} to="/mailto:info@devstudio.com">
-          <svg className={s.icon} width={widthMailto} height={heightMailto}>
-            <use href={`${icon}#mailto`}></use>
-          </svg>
+          <IconSvg
+            className={s.icon}
+            iconId="mailto"
+            width={widthMailto}
+            height={heightMailto}
+          />
           info@devstudio.com
         </NavLink>
       </li>
 
       <li className={s.item}>
         <NavLink className={s.link} to="/tel:+380961111111">
-          <svg className={s.icon} width={widthTel} height={heightTel}>
-            <use href={`${icon}#smartphone`}></use>
-          </svg>
+          <IconSvg
+            className={s.icon}
+            iconId="smartphone"
+            width={widthTel}
+            height={heightTel}
+          />
           +38 096 111 11 11
         </NavLink>
       </li>

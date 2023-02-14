@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Container } from 'components/Container';
 import { Navigation } from 'components/Navigation';
 import { ContactsNavList } from 'components/ContactsNavList';
-import { IconCloseAndOpen } from 'components/IconCloseAndOpen';
+import { IconSvg } from 'components/IconSvg';
 import { SiteNavList } from 'components/SiteNavList';
 import { BtnMenu } from 'components/BtnMenu';
 import { Modal } from 'components/Modal';
@@ -27,7 +27,12 @@ export const AppBar = () => {
             <Navigation />
             {isMobile && (
               <BtnMenu className={s.btnMenu} handleBtnClick={handleBtnClick}>
-                <IconCloseAndOpen className={s} iconBtn="menuOpen" />
+                <IconSvg
+                  className={s.icon}
+                  iconId="menuOpen"
+                  width="40"
+                  height="40"
+                />
               </BtnMenu>
             )}
             {isDeskAndTabl && <ContactsNavList />}
@@ -40,7 +45,12 @@ export const AppBar = () => {
       {isMobile && openMenu && (
         <Modal className={s}>
           <BtnMenu className={s.btnMenu} handleBtnClick={handleBtnClick}>
-            <IconCloseAndOpen className={s} iconBtn="menuClose" />
+            <IconSvg
+              className={s.icon}
+              iconId="menuClose"
+              width="40"
+              height="40"
+            />
           </BtnMenu>
           <SiteNavList handleBtnClick={handleBtnClick} />
         </Modal>

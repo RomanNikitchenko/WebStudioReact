@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Section } from 'components/Section';
 import { BtnMenu } from 'components/BtnMenu';
 import { Modal } from 'components/Modal';
+import { Form } from 'components/Form';
 import { IconSvg } from 'components/IconSvg';
 import s from './Hero.module.css';
 
@@ -55,6 +56,7 @@ export const Hero = () => {
               height="11"
             />
           </BtnMenu>
+          <Form />
         </Modal>
       )}
     </>

@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formName, .formTel, .formEmail, .formComment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formComment {
+    margin-bottom: 20px;
+}

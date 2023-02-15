@@ -4,7 +4,7 @@ import s from './Logo.module.css';
 export const Logo = () => {
   return (
     <Link className={s.link} to="/">
-      <span>Web</span>Studio
+      <span className={s.linkSpan}>Web</span>Studio
     </Link>
   );
 };

@@ -25,6 +25,6 @@
     }
 }
 
-span {
+.linkSpan {
     color: var(--accent-color);
 }

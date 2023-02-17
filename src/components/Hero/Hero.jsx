@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Section } from 'components/Section';
-import { BtnMenu } from 'components/BtnMenu';
+import { Button } from 'components/Button';
 import { Modal } from 'components/Modal';
 import { Form } from 'components/Form';
 import { IconSvg } from 'components/IconSvg';
@@ -41,22 +41,22 @@ export const Hero = () => {
     <>
       <Section className={s.heroSection}>
         <h1 className={s.heroTitle}>Эффективные решения для вашего бизнеса</h1>
-        <BtnMenu className={s.heroBtn} handleBtnClick={handleBtnClick}>
+        <Button className={s.heroBtn} handleBtnClick={handleBtnClick}>
           Заказать услугу
-        </BtnMenu>
+        </Button>
       </Section>
 
       {openModal && (
         <Modal className={s} isHidden={isHidden}>
-          <BtnMenu className={s.btnClose} handleBtnClick={handleBtnClick}>
+          <Button className={s.btnClose} handleBtnClick={handleBtnClick}>
             <IconSvg
               className={s.icon}
               iconId="modalClose"
               width="11"
               height="11"
             />
-          </BtnMenu>
-          <Form />
+          </Button>
+          <Form handleBtnClick={handleBtnClick} />
         </Modal>
       )}
     </>

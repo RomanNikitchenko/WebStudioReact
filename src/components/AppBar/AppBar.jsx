@@ -5,7 +5,7 @@ import { Navigation } from 'components/Navigation';
 import { ContactsNavList } from 'components/ContactsNavList';
 import { IconSvg } from 'components/IconSvg';
 import { SiteNavList } from 'components/SiteNavList';
-import { BtnMenu } from 'components/BtnMenu';
+import { Button } from 'components/Button';
 import { Modal } from 'components/Modal';
 import { useMediaQuery } from '@react-hook/media-query';
 import s from './AppBar.module.css';
@@ -26,14 +26,14 @@ export const AppBar = () => {
           <div className={s.containerNav}>
             <Navigation />
             {isMobile && (
-              <BtnMenu className={s.btnMenu} handleBtnClick={handleBtnClick}>
+              <Button className={s.btnMenu} handleBtnClick={handleBtnClick}>
                 <IconSvg
                   className={s.icon}
                   iconId="menuOpen"
                   width="40"
                   height="40"
                 />
-              </BtnMenu>
+              </Button>
             )}
             {isDeskAndTabl && <ContactsNavList />}
           </div>
@@ -44,14 +44,14 @@ export const AppBar = () => {
       </Suspense>
       {isMobile && openMenu && (
         <Modal className={s}>
-          <BtnMenu className={s.btnMenu} handleBtnClick={handleBtnClick}>
+          <Button className={s.btnMenu} handleBtnClick={handleBtnClick}>
             <IconSvg
               className={s.icon}
               iconId="menuClose"
               width="40"
               height="40"
             />
-          </BtnMenu>
+          </Button>
           <SiteNavList handleBtnClick={handleBtnClick} />
         </Modal>
       )}

@@ -1,1 +1,0 @@
-export { BtnMenu } from './BtnMenu';

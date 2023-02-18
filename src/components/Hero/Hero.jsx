@@ -11,6 +11,15 @@ export const Hero = () => {
   const [isHidden, setIsHidden] = useState(true);
   const [isPressed, setIsPressed] = useState(false);
 
+  //modal props
+  const [userName, setUserName] = useState('');
+  const [telephone, setTelephone] = useState('');
+  const [mail, setMail] = useState('');
+  const [postContent, setPostContent] = useState('');
+  const [agreed, setAgreed] = useState(false);
+  const [loader, setLoader] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
   const handleBtnClick = () => {
     if (isPressed) {
       return;
@@ -56,7 +65,22 @@ export const Hero = () => {
               height="11"
             />
           </Button>
-          <Form handleBtnClick={handleBtnClick} />
+          <Form
+            userName={userName}
+            setUserName={setUserName}
+            telephone={telephone}
+            setTelephone={setTelephone}
+            mail={mail}
+            setMail={setMail}
+            postContent={postContent}
+            setPostContent={setPostContent}
+            agreed={agreed}
+            setAgreed={setAgreed}
+            loader={loader}
+            setLoader={setLoader}
+            disabled={disabled}
+            setDisabled={setDisabled}
+          />
         </Modal>
       )}
     </>

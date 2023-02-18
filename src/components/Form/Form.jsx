@@ -1,18 +1,25 @@
-import { useState } from 'react';
 import { IconSvg } from 'components/IconSvg';
 import { Button } from 'components/Button';
 import icon from 'assets/symbol-defs.svg';
+import { ColorRing } from 'react-loader-spinner';
 import s from './Form.module.css';
 
-export const Form = ({ handleBtnClick }) => {
-  const [userName, setUserName] = useState('');
-  const [telephone, setTelephone] = useState('');
-  const [mail, setMail] = useState('');
-  const [postContent, setPostContent] = useState('');
-  const [agreed, setAgreed] = useState(false);
-  const [loader, setLoader] = useState(false);
-  const [disabled, setDisabled] = useState(false);
-
+export const Form = ({
+  userName,
+  setUserName,
+  telephone,
+  setTelephone,
+  mail,
+  postContent,
+  setPostContent,
+  setMail,
+  agreed,
+  setAgreed,
+  loader,
+  setLoader,
+  disabled,
+  setDisabled,
+}) => {
   const handleChange = evt => {
     const { name, value, checked } = evt.target;
 
@@ -61,11 +68,13 @@ export const Form = ({ handleBtnClick }) => {
       setAgreed(false);
       setLoader(false);
       setDisabled(false);
-    }, 5000);
+    }, 10000);
   };
 
   return (
     <form onSubmit={handleSubmit} className={s.form}>
+      <b className={s.formHeader}>Оставьте свои данные, мы вам перезвоним</b>
+
       <label className={s.formLabel}>
         <span className={s.labelSpan}>Имя</span>
         <input
@@ -158,8 +167,25 @@ export const Form = ({ handleBtnClick }) => {
         </span>
       </label>
 
-      <Button type="submit" disabled={!agreed || disabled}>
-        {loader ? 'загрузка...' : 'Отправить'}
+      <Button
+        type="submit"
+        disabled={!agreed || disabled}
+        className={`${s.ButtonSubmit} ${
+          !agreed || disabled ? s.buttonDisabled : ''
+        }`}
+      >
+        {loader ? (
+          <ColorRing
+            visible={true}
+            height="50"
+            width="50"
+            ariaLabel="blocks-loading"
+            wrapperClass="blocks-wrapper"
+            colors={['#b7d1e6', '#6eb1e7', '#2196f3', '#6eb1e7', '#b7d1e6']}
+          />
+        ) : (
+          'Отправить'
+        )}
       </Button>
     </form>
   );

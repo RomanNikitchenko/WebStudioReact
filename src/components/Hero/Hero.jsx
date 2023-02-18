@@ -11,7 +11,7 @@ export const Hero = () => {
   const [isHidden, setIsHidden] = useState(true);
   const [isPressed, setIsPressed] = useState(false);
 
-  //modal props
+  //modal form props
   const [userName, setUserName] = useState('');
   const [telephone, setTelephone] = useState('');
   const [mail, setMail] = useState('');
@@ -44,6 +44,26 @@ export const Hero = () => {
         setIsPressed(false);
       }, 300);
     }
+  };
+
+  //modal fun form
+  const formSubmitHandler = () => {
+    setTimeout(() => {
+      console.log(
+        `name: ${userName}, tel: ${telephone}, email: ${mail}, comment: ${postContent}, Agreed: ${agreed}`
+      );
+      resetForm();
+    }, 10000);
+  };
+
+  const resetForm = () => {
+    setUserName('');
+    setTelephone('');
+    setMail('');
+    setPostContent('');
+    setAgreed(false);
+    setLoader(false);
+    setDisabled(false);
   };
 
   return (
@@ -80,6 +100,7 @@ export const Hero = () => {
             setLoader={setLoader}
             disabled={disabled}
             setDisabled={setDisabled}
+            onSubmit={formSubmitHandler}
           />
         </Modal>
       )}

@@ -19,6 +19,7 @@ export const Form = ({
   setLoader,
   disabled,
   setDisabled,
+  onSubmit,
 }) => {
   const handleChange = evt => {
     const { name, value, checked } = evt.target;
@@ -53,22 +54,7 @@ export const Form = ({
     e.preventDefault();
     setLoader(true);
     setDisabled(true);
-    reset();
-  };
-
-  const reset = () => {
-    setTimeout(() => {
-      console.log(
-        `name: ${userName}, tel: ${telephone}, email: ${mail}, comment: ${postContent}, Agreed: ${agreed}`
-      );
-      setUserName('');
-      setTelephone('');
-      setMail('');
-      setPostContent('');
-      setAgreed(false);
-      setLoader(false);
-      setDisabled(false);
-    }, 10000);
+    onSubmit();
   };
 
   return (

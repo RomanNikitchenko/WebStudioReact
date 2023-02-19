@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/web-studio-react/static/css/main.40f733c3.css",
-    "main.js": "/web-studio-react/static/js/main.cbe1278b.js",
-    "static/css/922.3150794f.chunk.css": "/web-studio-react/static/css/922.3150794f.chunk.css",
-    "static/js/922.0337359a.chunk.js": "/web-studio-react/static/js/922.0337359a.chunk.js",
+    "main.js": "/web-studio-react/static/js/main.95155d4a.js",
+    "static/css/546.439ff89c.chunk.css": "/web-studio-react/static/css/546.439ff89c.chunk.css",
+    "static/js/546.39598983.chunk.js": "/web-studio-react/static/js/546.39598983.chunk.js",
     "static/css/934.99ad5273.chunk.css": "/web-studio-react/static/css/934.99ad5273.chunk.css",
     "static/js/934.14210e2f.chunk.js": "/web-studio-react/static/js/934.14210e2f.chunk.js",
     "static/css/317.8d92483c.chunk.css": "/web-studio-react/static/css/317.8d92483c.chunk.css",
     "static/js/317.8940df3a.chunk.js": "/web-studio-react/static/js/317.8940df3a.chunk.js",
-    "static/js/402.895eeb2e.chunk.js": "/web-studio-react/static/js/402.895eeb2e.chunk.js",
+    "static/js/97.ded3a0f3.chunk.js": "/web-studio-react/static/js/97.ded3a0f3.chunk.js",
     "static/js/396.3da4bf97.chunk.js": "/web-studio-react/static/js/396.3da4bf97.chunk.js",
     "static/media/hero-desktop1600@2x.jpg": "/web-studio-react/static/media/hero-desktop1600@2x.1845d10988e6759310fc.jpg",
     "static/media/hero-tablet768@2x.jpg": "/web-studio-react/static/media/hero-tablet768@2x.d4482bcebd99362bf92d.jpg",
@@ -50,18 +50,18 @@
     "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.82361c0edfb6bb3c298c5a9ae37f03db.svg",
     "index.html": "/web-studio-react/index.html",
     "main.40f733c3.css.map": "/web-studio-react/static/css/main.40f733c3.css.map",
-    "main.cbe1278b.js.map": "/web-studio-react/static/js/main.cbe1278b.js.map",
-    "922.3150794f.chunk.css.map": "/web-studio-react/static/css/922.3150794f.chunk.css.map",
-    "922.0337359a.chunk.js.map": "/web-studio-react/static/js/922.0337359a.chunk.js.map",
+    "main.95155d4a.js.map": "/web-studio-react/static/js/main.95155d4a.js.map",
+    "546.439ff89c.chunk.css.map": "/web-studio-react/static/css/546.439ff89c.chunk.css.map",
+    "546.39598983.chunk.js.map": "/web-studio-react/static/js/546.39598983.chunk.js.map",
     "934.99ad5273.chunk.css.map": "/web-studio-react/static/css/934.99ad5273.chunk.css.map",
     "934.14210e2f.chunk.js.map": "/web-studio-react/static/js/934.14210e2f.chunk.js.map",
     "317.8d92483c.chunk.css.map": "/web-studio-react/static/css/317.8d92483c.chunk.css.map",
     "317.8940df3a.chunk.js.map": "/web-studio-react/static/js/317.8940df3a.chunk.js.map",
-    "402.895eeb2e.chunk.js.map": "/web-studio-react/static/js/402.895eeb2e.chunk.js.map",
+    "97.ded3a0f3.chunk.js.map": "/web-studio-react/static/js/97.ded3a0f3.chunk.js.map",
     "396.3da4bf97.chunk.js.map": "/web-studio-react/static/js/396.3da4bf97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40f733c3.css",
-    "static/js/main.cbe1278b.js"
+    "static/js/main.95155d4a.js"
   ]
 }

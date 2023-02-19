@@ -125,6 +125,7 @@
 }
 
 .modal__content {
+    overflow-y: scroll;
     position: absolute;
     top: 50%;
     left: 50%;

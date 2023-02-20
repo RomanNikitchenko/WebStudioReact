@@ -2,35 +2,34 @@ import { IconSvg } from 'components/IconSvg';
 import { Button } from 'components/Button';
 import icon from 'assets/symbol-defs.svg';
 import { ColorRing } from 'react-loader-spinner';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 import s from './Form.module.css';
 
-export const Form = ({
-  userName,
-  setUserName,
-  telephone,
-  setTelephone,
-  mail,
-  postContent,
-  setPostContent,
-  setMail,
-  agreed,
-  setAgreed,
-  loader,
-  setLoader,
-  disabled,
-  setDisabled,
-  onSubmit,
-}) => {
+export const Form = ({ formState, onSubmit }) => {
+  const {
+    userName,
+    setUserName,
+    number,
+    setNumber,
+    mail,
+    setMail,
+    postContent,
+    setPostContent,
+    agreed,
+    setAgreed,
+    loader,
+    setLoader,
+    disabled,
+    setDisabled,
+  } = formState;
+
   const handleChange = evt => {
     const { name, value, checked } = evt.target;
 
     switch (name) {
       case 'name':
         setUserName(value);
-        break;
-
-      case 'tel':
-        setTelephone(value);
         break;
 
       case 'email':
@@ -70,6 +69,8 @@ export const Form = ({
           type="text"
           name="name"
           value={userName}
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          required
           onChange={handleChange}
         />
         <IconSvg
@@ -82,20 +83,20 @@ export const Form = ({
 
       <label className={s.formLabel}>
         <span className={s.labelSpan}>Телефон</span>
-        <input
-          className={`${s.modalFormInput} ${
-            telephone ? s.placeholderShown : ''
-          }`}
+        <PhoneInput
+          className={s.PhoneInput}
+          defaultCountry="UA"
+          onChange={number => {
+            setNumber(number);
+          }}
+          region="Europe"
           type="tel"
-          name="tel"
-          value={telephone}
-          onChange={handleChange}
-        />
-        <IconSvg
-          className={s.modalFormIcon}
-          iconId="phone"
-          width="18"
-          height="18"
+          name="number"
+          value={number}
+          autoComplete="off"
+          international
+          required
+          maxLength="16"
         />
       </label>
 
@@ -107,6 +108,7 @@ export const Form = ({
           name="email"
           value={mail}
           onChange={handleChange}
+          required
         />
         <IconSvg
           className={s.modalFormIcon}
@@ -155,9 +157,9 @@ export const Form = ({
 
       <Button
         type="submit"
-        disabled={!agreed || disabled}
+        disabled={!agreed || !number || disabled}
         className={`${s.ButtonSubmit} ${
-          !agreed || disabled ? s.buttonDisabled : ''
+          !agreed || !number || disabled ? s.buttonDisabled : ''
         }`}
       >
         {loader ? (

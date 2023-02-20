@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Section } from 'components/Section';
 import { Button } from 'components/Button';
 import { Modal } from 'components/Modal';
-// import { Form } from 'components/Form';
-import { FormOrderService } from 'components/FormOrderService';
+import { Form } from 'components/Form';
 import { IconSvg } from 'components/IconSvg';
 import s from './Hero.module.css';
 
@@ -12,14 +11,31 @@ export const Hero = () => {
   const [isHidden, setIsHidden] = useState(true);
   const [isPressed, setIsPressed] = useState(false);
 
-  //modal form props
-  // const [userName, setUserName] = useState('');
-  // const [telephone, setTelephone] = useState('');
-  // const [mail, setMail] = useState('');
-  // const [postContent, setPostContent] = useState('');
-  // const [agreed, setAgreed] = useState(false);
-  // const [loader, setLoader] = useState(false);
-  // const [disabled, setDisabled] = useState(false);
+  //modal form
+  const [userName, setUserName] = useState('');
+  const [number, setNumber] = useState('');
+  const [mail, setMail] = useState('');
+  const [postContent, setPostContent] = useState('');
+  const [agreed, setAgreed] = useState(false);
+  const [loader, setLoader] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
+  const formState = {
+    userName,
+    setUserName,
+    number,
+    setNumber,
+    mail,
+    setMail,
+    postContent,
+    setPostContent,
+    agreed,
+    setAgreed,
+    loader,
+    setLoader,
+    disabled,
+    setDisabled,
+  };
 
   const handleBtnClick = () => {
     if (isPressed) {
@@ -47,25 +63,25 @@ export const Hero = () => {
     }
   };
 
-  //modal fun form
-  // const formSubmitHandler = () => {
-  //   setTimeout(() => {
-  //     console.log(
-  //       `name: ${userName}, tel: ${telephone}, email: ${mail}, comment: ${postContent}, Agreed: ${agreed}`
-  //     );
-  //     resetForm();
-  //   }, 10000);
-  // };
+  //modal form
+  const formSubmitHandler = () => {
+    setTimeout(() => {
+      console.log(
+        `name: ${userName}, tel: ${number}, email: ${mail}, comment: ${postContent}, Agreed: ${agreed}`
+      );
+      resetForm();
+    }, 10000);
+  };
 
-  // const resetForm = () => {
-  //   setUserName('');
-  //   setTelephone('');
-  //   setMail('');
-  //   setPostContent('');
-  //   setAgreed(false);
-  //   setLoader(false);
-  //   setDisabled(false);
-  // };
+  const resetForm = () => {
+    setUserName('');
+    setNumber('');
+    setMail('');
+    setPostContent('');
+    setAgreed(false);
+    setLoader(false);
+    setDisabled(false);
+  };
 
   return (
     <>
@@ -86,24 +102,7 @@ export const Hero = () => {
               height="11"
             />
           </Button>
-          {/* <Form
-            userName={userName}
-            setUserName={setUserName}
-            telephone={telephone}
-            setTelephone={setTelephone}
-            mail={mail}
-            setMail={setMail}
-            postContent={postContent}
-            setPostContent={setPostContent}
-            agreed={agreed}
-            setAgreed={setAgreed}
-            loader={loader}
-            setLoader={setLoader}
-            disabled={disabled}
-            setDisabled={setDisabled}
-            onSubmit={formSubmitHandler}
-          /> */}
-          <FormOrderService />
+          <Form formState={formState} onSubmit={formSubmitHandler} />
         </Modal>
       )}
     </>

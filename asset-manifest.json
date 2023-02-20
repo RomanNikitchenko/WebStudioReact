@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/web-studio-react/static/css/main.40f733c3.css",
-    "main.js": "/web-studio-react/static/js/main.95155d4a.js",
-    "static/css/546.439ff89c.chunk.css": "/web-studio-react/static/css/546.439ff89c.chunk.css",
-    "static/js/546.39598983.chunk.js": "/web-studio-react/static/js/546.39598983.chunk.js",
+    "main.css": "/web-studio-react/static/css/main.e6eb6d4f.css",
+    "main.js": "/web-studio-react/static/js/main.72a542a1.js",
+    "static/css/228.a063567d.chunk.css": "/web-studio-react/static/css/228.a063567d.chunk.css",
+    "static/js/228.9221585d.chunk.js": "/web-studio-react/static/js/228.9221585d.chunk.js",
     "static/css/934.99ad5273.chunk.css": "/web-studio-react/static/css/934.99ad5273.chunk.css",
     "static/js/934.14210e2f.chunk.js": "/web-studio-react/static/js/934.14210e2f.chunk.js",
     "static/css/317.8d92483c.chunk.css": "/web-studio-react/static/css/317.8d92483c.chunk.css",
     "static/js/317.8940df3a.chunk.js": "/web-studio-react/static/js/317.8940df3a.chunk.js",
-    "static/js/97.ded3a0f3.chunk.js": "/web-studio-react/static/js/97.ded3a0f3.chunk.js",
+    "static/js/720.f2b3675d.chunk.js": "/web-studio-react/static/js/720.f2b3675d.chunk.js",
     "static/js/396.3da4bf97.chunk.js": "/web-studio-react/static/js/396.3da4bf97.chunk.js",
     "static/media/hero-desktop1600@2x.jpg": "/web-studio-react/static/media/hero-desktop1600@2x.1845d10988e6759310fc.jpg",
     "static/media/hero-tablet768@2x.jpg": "/web-studio-react/static/media/hero-tablet768@2x.d4482bcebd99362bf92d.jpg",
@@ -49,19 +49,19 @@
     "static/media/img4-list-item354@2x.jpg": "/web-studio-react/static/media/img4-list-item354@2x.30430951fa3cd11f960c.jpg",
     "static/media/symbol-defs.svg": "/web-studio-react/static/media/symbol-defs.82361c0edfb6bb3c298c5a9ae37f03db.svg",
     "index.html": "/web-studio-react/index.html",
-    "main.40f733c3.css.map": "/web-studio-react/static/css/main.40f733c3.css.map",
-    "main.95155d4a.js.map": "/web-studio-react/static/js/main.95155d4a.js.map",
-    "546.439ff89c.chunk.css.map": "/web-studio-react/static/css/546.439ff89c.chunk.css.map",
-    "546.39598983.chunk.js.map": "/web-studio-react/static/js/546.39598983.chunk.js.map",
+    "main.e6eb6d4f.css.map": "/web-studio-react/static/css/main.e6eb6d4f.css.map",
+    "main.72a542a1.js.map": "/web-studio-react/static/js/main.72a542a1.js.map",
+    "228.a063567d.chunk.css.map": "/web-studio-react/static/css/228.a063567d.chunk.css.map",
+    "228.9221585d.chunk.js.map": "/web-studio-react/static/js/228.9221585d.chunk.js.map",
     "934.99ad5273.chunk.css.map": "/web-studio-react/static/css/934.99ad5273.chunk.css.map",
     "934.14210e2f.chunk.js.map": "/web-studio-react/static/js/934.14210e2f.chunk.js.map",
     "317.8d92483c.chunk.css.map": "/web-studio-react/static/css/317.8d92483c.chunk.css.map",
     "317.8940df3a.chunk.js.map": "/web-studio-react/static/js/317.8940df3a.chunk.js.map",
-    "97.ded3a0f3.chunk.js.map": "/web-studio-react/static/js/97.ded3a0f3.chunk.js.map",
+    "720.f2b3675d.chunk.js.map": "/web-studio-react/static/js/720.f2b3675d.chunk.js.map",
     "396.3da4bf97.chunk.js.map": "/web-studio-react/static/js/396.3da4bf97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40f733c3.css",
-    "static/js/main.95155d4a.js"
+    "static/css/main.e6eb6d4f.css",
+    "static/js/main.72a542a1.js"
   ]
 }

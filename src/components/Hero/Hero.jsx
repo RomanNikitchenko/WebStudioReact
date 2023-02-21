@@ -11,32 +11,6 @@ export const Hero = () => {
   const [isHidden, setIsHidden] = useState(true);
   const [isPressed, setIsPressed] = useState(false);
 
-  //modal form
-  const [userName, setUserName] = useState('');
-  const [number, setNumber] = useState('');
-  const [mail, setMail] = useState('');
-  const [postContent, setPostContent] = useState('');
-  const [agreed, setAgreed] = useState(false);
-  const [loader, setLoader] = useState(false);
-  const [disabled, setDisabled] = useState(false);
-
-  const formState = {
-    userName,
-    setUserName,
-    number,
-    setNumber,
-    mail,
-    setMail,
-    postContent,
-    setPostContent,
-    agreed,
-    setAgreed,
-    loader,
-    setLoader,
-    disabled,
-    setDisabled,
-  };
-
   const handleBtnClick = () => {
     if (isPressed) {
       return;
@@ -64,6 +38,31 @@ export const Hero = () => {
   };
 
   //modal form
+  const [userName, setUserName] = useState('');
+  const [number, setNumber] = useState('');
+  const [mail, setMail] = useState('');
+  const [postContent, setPostContent] = useState('');
+  const [agreed, setAgreed] = useState(false);
+  const [loader, setLoader] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
+  const formState = {
+    userName,
+    setUserName,
+    number,
+    setNumber,
+    mail,
+    setMail,
+    postContent,
+    setPostContent,
+    agreed,
+    setAgreed,
+    loader,
+    setLoader,
+    disabled,
+    setDisabled,
+  };
+
   const formSubmitHandler = () => {
     setTimeout(() => {
       console.log(

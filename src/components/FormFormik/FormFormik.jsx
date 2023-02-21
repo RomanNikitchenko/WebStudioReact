@@ -5,7 +5,7 @@ import { Button } from 'components/Button';
 import icon from 'assets/symbol-defs.svg';
 import { ColorRing } from 'react-loader-spinner';
 import { object, string, number } from 'yup';
-import s from './FormOrderService.module.css';
+import s from './FormFormik.module.css';
 
 const FormError = ({ name }) => {
   return (
@@ -24,7 +24,7 @@ const userSchema = object({
 
 const initialValues = { name: '', tel: '', email: '' };
 
-export const FormOrderService = () => {
+export const FormFormik = () => {
   const [postContent, setPostContent] = useState('');
   const [agreed, setAgreed] = useState(false);
   const [loader, setLoader] = useState(false);

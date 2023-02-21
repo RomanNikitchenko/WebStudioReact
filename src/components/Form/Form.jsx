@@ -84,7 +84,6 @@ export const Form = ({ formState, onSubmit }) => {
       <label className={s.formLabel}>
         <span className={s.labelSpan}>Телефон</span>
         <PhoneInput
-          className={s.PhoneInput}
           defaultCountry="UA"
           onChange={number => {
             setNumber(number);

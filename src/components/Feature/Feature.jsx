@@ -47,8 +47,8 @@ export const Feature = () => {
                       height="70"
                     />
                   </div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                  <h3 className={s.title}>{title}</h3>
+                  <p className={s.text}>{text}</p>
                 </li>
               );
             })}

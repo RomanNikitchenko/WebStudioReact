@@ -41,7 +41,9 @@ export const Hero = () => {
   const [userName, setUserName] = useState('');
   const [number, setNumber] = useState('');
   const [mail, setMail] = useState('');
-  const [postContent, setPostContent] = useState('');
+  const [postContent, setPostContent] = useState(
+    localStorage.getItem('postContent') || ''
+  ); // устанавливаем начальное значение из localStorage
   const [agreed, setAgreed] = useState(false);
   const [loader, setLoader] = useState(false);
   const [disabled, setDisabled] = useState(false);
@@ -63,25 +65,6 @@ export const Hero = () => {
     setDisabled,
   };
 
-  const formSubmitHandler = () => {
-    setTimeout(() => {
-      console.log(
-        `name: ${userName}, tel: ${number}, email: ${mail}, comment: ${postContent}, Agreed: ${agreed}`
-      );
-      resetForm();
-    }, 10000);
-  };
-
-  const resetForm = () => {
-    setUserName('');
-    setNumber('');
-    setMail('');
-    setPostContent('');
-    setAgreed(false);
-    setLoader(false);
-    setDisabled(false);
-  };
-
   return (
     <>
       <Section className={s.heroSection}>
@@ -101,7 +84,7 @@ export const Hero = () => {
               height="11"
             />
           </Button>
-          <Form formState={formState} onSubmit={formSubmitHandler} />
+          <Form formState={formState} />
         </Modal>
       )}
     </>

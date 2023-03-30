@@ -38,6 +38,7 @@ export const Form = ({ formState, onSubmit }) => {
 
       case 'comment':
         setPostContent(value);
+        localStorage.setItem('postContent', value); // сохраняем значение в localStorage
         break;
 
       case 'agreed':
@@ -53,7 +54,26 @@ export const Form = ({ formState, onSubmit }) => {
     e.preventDefault();
     setLoader(true);
     setDisabled(true);
-    onSubmit();
+    formSubmitHandler();
+  };
+
+  const formSubmitHandler = () => {
+    setTimeout(() => {
+      console.log(
+        `name: ${userName}, tel: ${number}, email: ${mail}, comment: ${postContent}, Agreed: ${agreed}`
+      );
+      resetForm();
+    }, 10000);
+  };
+
+  const resetForm = () => {
+    setUserName('');
+    setNumber('');
+    setMail('');
+    setPostContent('');
+    localStorage.removeItem('postContent');
+    setLoader(false);
+    setDisabled(false);
   };
 
   return (
